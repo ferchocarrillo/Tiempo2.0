@@ -123,13 +123,13 @@ e{
             <center style="background-image: linear-gradient(#EAF2F8, #AAB7B8);">
             <img src="\theme\images\isotipo-slogan.png" float="left" height="40" width="140">
             <h3 style="font-family: Georgia, Verdana, sans-serif; font-weight: bold; text-transform: uppercase;">{{ Auth::user()->name }}</h3>
-            <h1 style="font-weight: bold; text-aline:center;">ESTAS EN RETRO ALIMENTACION</h1>
+            <h1 style="font-weight: bold; text-aline:center;">CALAMIDAD DOMESTICA</h1>
 
         </center>
         <div class="row">
         <div class="card" style="background-color: transparent; width:100%" >
                 <center>  <body input type ="time" style="font-size: 20px;  border-radius:0.75rem;" onload="HoraActual(<?php echo date("H").", ".date("i").", ".date("s"); ?>)" >
-                  
+
                     <link rel="shortcut icon" href="">
             <div style=" margin-left:0;">
                 <script>
@@ -158,7 +158,7 @@ e{
         <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Turno</p>
                         </strong>
@@ -167,230 +167,268 @@ e{
                                 <img src="\theme\images\turno.png" alt="" style="width: 140px; heigth:120px; margen-left: 23rem;">
                             </div>
                             <div class="col-sm-6">
-                        <p class="card-text"><small class="text-muted2"><b>Entrada: </b>&nbsp; <e> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
-                        <p class="card-text"><small class="text-muted2"><b>Salida: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('salida', $ciclosos->salida)}}</e> </small></p>
-                        <p class="card-text"><small class="text-muted2"><b>Tiempo de Conexión </b>  {{ old('total', $ciclosos->total)}}<b>minutos</b></small></p>
-
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('salida', $ciclosos->salida)}}</e> </small></p>
+                            @if (empty($ciclosos->salida))
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Conexión: </b><rem  class="tiemp-text">0</rem> </small></p>
+                            @else
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Conexión: </b><rem  class="tiemp-text"> {{ $total }} </rem></small></p>
+                            @endif
 
 
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
 
-                    <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Break</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="\theme\images\cafe.png" alt="" style="width: 140px; heigth:130px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                          <p class="card-text"><small class="text-muted2"><b>Entrada: </b> &nbsp;<e> {{ old('breakin', $ciclosos->breakin)}} </e></small></p>
-                          <p class="card-text"><small class="text-muted2"><b>Salida: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('breakout', $ciclosos->breakout)}}</e> </small></p>
-                          <p class="card-text"><small class="text-muted2"><b>Tiempo de Break </b> {{ old('timebreak', $ciclosos->timebreak)}} <b>minutos</b></small></p>
+
+                  <div class="col-sm-4 style_card">
+                    <div class="card-space style_card">
+                        <div class="card-bodyNew1 style_card">
+                            <strong>
+                                <p class="card-text" style="color:rgb(0, 0, 0)">Break</p>
+                            </strong>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="\theme\images\cafe.png" alt="" style="width: 140px; heigth:130px; margen-left: 23rem;">
+                                </div>
+                                <div class="col-sm-6">
+                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('breakin', $ciclosos->breakin)}} </e></small></p>
+                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('breakout', $ciclosos->breakout)}}</e> </small></p>
+                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b>  {{ $ciclosos->timebreak }} </small></p>
                         </div>
                       </div>
                       </div>
                       </div>
                       </div>
+
 
 
                       <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Almuerzo</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\cubiertos.png" alt="" style="width: 140px; heigth:130px; margen-left: 23rem;">
-                            </div>
+                        <div class="card-space style_card">
+                            <div class="card-bodyNew1 style_card">
+                                <strong>
+                                    <p class="card-text" style="color:rgb(0, 0, 0)">Almuerzo</p>
+                                </strong>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <br>
+                                        <img src="\theme\images\cubiertos.png" alt="" style="width: 140px; heigth:130px; margen-left: 23rem;">
+                                    </div>
 
-                            <div class="col-sm-6">
-                          <p class="card-text"><small class="text-muted2"><b>Entrada</b>&nbsp;<e> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
-                          <p class="card-text"><small class="text-muted2"><b>Salida</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('almuerzoout', $ciclosos->almuerzoout)}}</e> </small></p>
-                          <p class="card-text"><small class="text-muted2"><b>Tiempo de Almuerzo</b>  {{ old('timelunch', $ciclosos->timelunch)}} <b>minutos</b></small></p>
+                                    <div class="col-sm-6">
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text"> {{ old('almuerzoout', $ciclosos->almuerzoout)}} </e></small></p>
+
+                            @if (is_null($ciclosos->almuerzo))
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">0</rem></small></p>
+                            @else
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timelunch }} </rem><b> minutos</b></small></p>
+                            @endif
+                        </div>
+                        </div>
+                        </div>
+                        </div>
                         </div>
                       </div>
-                      </div>
-                      </div>
-                      </div>
-                      </div>
-
 
 
                       <div class="row">
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Capacitación</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\capacitacion.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
-                                <br>
-                            </div>
-                            <div class="col-sm-6">
-                                    &nbsp;&nbsp;&nbsp;
+                        <div class="col-sm-4 style_card">
+                            <div class="card-space style_card">
+                                <div class="card-bodyNew1 style_card">
+                                    <strong>
+                                        <p class="card-text" style="color:rgb(0, 0, 0)">Capacitación</p>
+                                    </strong>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <br>
+                                            <img src="\theme\images\capacitacion.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
+                                            <br>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('capacitacion', $ciclosos->capacitacion)}} </e></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('capout', $ciclosos->capout)}}</e> </small></p>
+                                        @if (empty($ciclosos->capout))
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
+                                        @else
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecapa }} </rem></small></p>
+                                        @endif
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                              </div>
 
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de Capacitación</b> {{ old('timecap', $ciclosos->timecap)}} </small></p>
-
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                  </div>
 
 
+                              <div class="col-sm-4 style_card">
+                                <div class="card-space style_card">
+                                    <div class="card-bodyNew1 style_card">
+                                        <strong>
+                                            <p class="card-text" style="color:rgb(0, 0, 0)">Pausas Activas</p>
+                                        </strong>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <br>
+                                                <img src="\theme\images\pausas.png" style="width: 100px; heigth:80px; margen-left: 23rem;">
+                                            </div>
+                                            <div class="col-sm-6">
+                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b> <e class="tiemp-text"> {{ old('pausas', $ciclosos->pausas)}} </e></small></p>
+                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
+
+                                            @if (empty($ciclosos->pausasout))
+                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
+                                            @else
+                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timepausas }}</rem> </small></p>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    </div>
+                                  </div>
+                                  </div>
 
 
-                  <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Pausas Activas</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\pausas.png" style="width: 100px; heigth:80px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                            <p class="card-text"><small class="text-muted2"><b>Tiempo de Pausas Activas</b>  {{ old('timepausas', $ciclosos->timepausas)}} </small></p>
-                        </div>
+
+                                  <div class="col-sm-4">
+                                    <div class="card-space style_card">
+                                        <div class="card-bodyNew1 style_card">
+                                            <strong>
+                                                <p class="card-text" style="color:rgb(0, 0, 0)">Daño Tecnico</p>
+                                            </strong>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <br>
+                                                    <img src="\theme\images\dañado.png" style="width: 100px; heigth:90px; margen-left: 23rem;">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('baño', $ciclosos->daño)}} </e></small></p>
+                                                <p class="card-textreloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
+
+                                                    @if (empty($ciclosos->dañoout))
+                                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                                @else
+                                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
+                                                @endif
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
                     </div>
-                </div>
-                  </div>
-                  </div>
-
-
-
-                  <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Daño Tecnico</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\dañado.png" style="width: 100px; heigth:90px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de Daño de Equipo</b> {{ old('timedaño', $ciclosos->timedaño)}} </small></p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-
 
 
                     <div class="row">
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Evaluación</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="\theme\images\evalluaciones.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de evaluacion</b>  {{ old('timeeva', $ciclosos->timeeva)}} </small></p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  </div>
+                        <div class="col-sm-4 style_card">
+                            <div class="card-space style_card">
+                                <div class="card-bodyNew1 style_card">
+                                    <strong>
+                                        <p class="card-text" style="color:rgb(0, 0, 0)">Evaluación</p>
+                                    </strong>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="\theme\images\evalluaciones.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
+                                        </div>
+                                        <div class="col-sm-6">
 
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('evaluacion', $ciclosos->evaluacion)}} </e></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
 
-                  <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Retro</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="\theme\images\retroa.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-
-                            <p class="card-text"><small class="text-muted2">Ingreso&nbsp;&nbsp; <e> {{ old('retro', $ciclosos->retro)}} </e></small></p>
-                                <p class="card-text"><small class="text-muted2">Salida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
-
-                                @if (empty($ciclosos->retorout))
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo: </b>
-                                        <rem> 0 </rem>
-                                    </small></p>
-                                @else
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo: </b>
-                                        <rem> {{ $timeretro }}</rem>
-                                    </small></p>
-                                @endif
-                                      
-                               </div>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
+                                            @if (empty($ciclosos->evaluacionout))
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                        @else
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
+                                        @endif
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              </div>
 
 
 
-                    <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Reunión</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="\theme\images\REUNION.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
+                              <div class="col-sm-4 style_card">
+                                <div class="card-space style_card">
+                                    <div class="card-bodyNew1 style_card">
+                                        <strong>
+                                            <p class="card-text" style="color:rgb(0, 0, 0)">Retro</p>
+                                        </strong>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <img src="\theme\images\retroa.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
+                                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
+                                                   @if (empty($ciclosos->retroout))
+                                                   <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                                   @else
+                                                   <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
+                                                   @endif
 
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de Reunion</b></b>  {{ old('timereunion', $ciclosos->timereunion)}} </small></p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  </div>
-                  </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+
+
+
+                                        <div class="col-sm-4 style_card">
+                                            <div class="card-space style_card">
+                                                <div class="card-bodyNew1 style_card">
+                                                    <strong>
+                                                        <p class="card-text" style="color:rgb(0, 0, 0)">Reunión</p>
+                                                    </strong>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <img src="\theme\images\REUNION.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
+                                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
+                                                            @if (empty($ciclosos->reunionout))
+                                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
+                                                            @else
+                                                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
+                                                            @endif
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                              </div>
 
 
 
                   <div class="row">
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Baño</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="\theme\images\baño.png" alt="" style="width: 130px; heigth:120px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="card-text"><small class="text-muted2">Ingreso&nbsp;&nbsp; <e> {{ old('evaluacion', $ciclosos->evaluacion)}} </e></small></p>
-                                <p class="card-text"><small class="text-muted2">Salida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
-                                
+                    <div class="col-sm-4 style_card">
+                        <div class="card-space style_card">
+                            <div class="card-bodyNew1 style_card">
+                                <strong>
+                                    <p class="card-text" style="color:rgb(0, 0, 0)">Baño</p>
+                                </strong>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img src="\theme\images\baño.png" alt="" style="width: 130px; heigth:120px; margen-left: 23rem;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('bano', $ciclosos->bano)}} </e></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
+                                        @if (empty($ciclosos->banoout))
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                        @else
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timebano }}</rem></small></p>
+                                        @endif
 
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
 
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
@@ -406,17 +444,19 @@ e{
                             <div class="col-sm-6">
 
                             <div id="contenedor_reloj" style="width: 150px; height:50px ; font-size:20px; font-family: Lucida Console, Courier New , monospace; text-align:center; margin-left:-40;"></div>
-                            
-                            
+
+
                             <form action="{{url('/ciclocalamidadout/'.$ciclosos->id)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                     {{csrf_field()}}
-                                    @method('PATCH')                                    
+                                    @method('PATCH')
                                     <div><input type="hidden" id="hoy" name"hoy" value="{{ $hoy }}"> </div>
                                     <div><input type="hidden" id="hora" name"hora" value="{{ $hora }}"> </div>
                                    <div><input type="hidden" id= "nombre" name="nombre" value=" {{$user_nombre}}"></div>
                                     <div><input type="hidden" id= "cedula" name="cedula" value=" {{$user_cedula}}"></div>
                                     <div><input type="hidden" id= "calamidadout" name="calamidadout" value=" {{$hora}}"></div>
+                                    <div><input type="hidden" name="salida" id="salida" value="{{ $hora }}"></div>
                                     <input type="hidden" id="timecalamidad" name="timecalamidad" value="{{ $timecalamidad}}">
+                                    <input type="hidden" name="total" id="total" value="{{$total}}">
                                     <p class="card-text reloj-text"><small class="text-muted2">Inicio:<e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
                                 <input type='submit' class="botones prueba-btn" value='Fin'>
                             </form>
@@ -460,7 +500,7 @@ e{
 
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia médica</p>
                         </strong>
@@ -476,11 +516,11 @@ e{
 
 
                                 @if (empty($ciclosos->reunionout))
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de Reunión: </b>
+                                <p class="card-text"><small class="text-muted2"><b>Tiempo: </b>
                                         <rem>0</rem>
                                     </small></p>
                                 @else
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de Reunión: </b>
+                                <p class="card-text"><small class="text-muted2"><b>Tiempo: </b>
                                         <rem> {{ $timereunion }} </rem>
                                     </small></p>
                                 @endif
@@ -530,8 +570,8 @@ e{
               @section('js')
       <script>
       Swal.fire(
-        'TOMALO COMO UNA OPORTUNIDAD DE MEJORA',
-        'REGISTRA EL TIEMPO DE RETROALIMENTACIÓN',
+        'ESPERO QUE TODO SALGA BIEN',
+        'ESTE REGISTRO DARA TERMINO A TU TURNO DE HOY',
         'success'
       )
       </script>

@@ -108,6 +108,7 @@ background-size:cover;
                 width: 500px;
                 height:500px;
                 background-color:red;
+                color:#FFFFFF;
             }
         </style>
                 </div>
@@ -116,18 +117,18 @@ background-size:cover;
             <div class="content">
                 <div class="title m-b-md">
                     <img src="{{asset('theme/images/icon/isotipo.png')}}" alt="CoolAdmin" width="350px">
-                                       
+
                     <h4 style="color:#FFFFFF;">Sistema de Gestion de Tiempos</h4>
                 </div>
 
                 <div class="links">
 
                 </div>
-                
+
             </div>
-            
+
         </div>
 
-        
+
     </body>
 </html>

@@ -129,7 +129,7 @@ e{
         <div class="row">
         <div class="card" style="background-color: transparent; width:100%" >
                 <center>  <body input type ="time" style="font-size: 20px;  border-radius:0.75rem;" onload="HoraActual(<?php echo date("H").", ".date("i").", ".date("s"); ?>)" >
-                  
+
                     <link rel="shortcut icon" href="">
             <div style=" margin-left:0;">
                 <script>
@@ -145,7 +145,7 @@ e{
             </div>
     </body>
         <div id="cuenta"></div>
-        
+
         <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
@@ -287,7 +287,7 @@ e{
                     </div>
 
 
-                  
+
                     <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
@@ -361,7 +361,7 @@ e{
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>                         
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Retroalimentación:</b>  {{ old('timeretro', $ciclosos->timeretro)}} </small></p>
                             </div>
                         </div>
@@ -383,7 +383,7 @@ e{
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>                         
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Reunion:</b>  {{ old('timereunion', $ciclosos->timereunion)}} </small></p>
                             </div>
                         </div>
@@ -525,7 +525,29 @@ e{
         'success'
       )
       </script>
+
+<script>
+
+$(document).ready(function(){
+
+ if(window.innerWidth < 768){
+     $('.btn').addClass('botones');
+ }
+
+ // Medida por defecto (Sin ningún nombre de clase)
+ else if(window.innerWidth < 900){
+     $('.btn').removeClass('botones');
+ }
+
+ // Si el ancho del navegador es menor a 1200 px le asigno la clase 'btn-lg'
+ else if(window.innerWidth < 1200){
+     $('.btn').addClass('botones');
+ }
+
+});
+</script>
       @stop
+
 
 
 

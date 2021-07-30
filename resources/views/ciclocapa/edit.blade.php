@@ -145,12 +145,12 @@ e{
             </div>
     </body>
         <div id="cuenta"></div>
-        
+
 
         <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Turno</p>
                         </strong>
@@ -167,11 +167,11 @@ e{
                 </div>
                 </div>
                 </div>
-                
+
 
                 <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Break</p>
                         </strong>
@@ -191,7 +191,7 @@ e{
 
                   <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Almuerzo</p>
                         </strong>
@@ -223,7 +223,7 @@ e{
                         <div class="row">
                             <div class="col-sm-6">
                                 <img src="\theme\images\capacitacion.png" alt="" style="width: 100px; heigth:90px; margen-left: 23rem;">
-                                
+
                             </div>
                             <div class="col-sm-6">
                             <form action="{{url('/ciclocapa/'.$ciclosos->id)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -256,7 +256,7 @@ e{
 
                         <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Pausas Activas</p>
                         </strong>
@@ -268,7 +268,7 @@ e{
                             <div class="col-sm-6">
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('pausas', $ciclosos->pausas)}} </e></small></p>
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
-                            
+
                             @if (empty($ciclosos->pausasout))
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Pausas: </b><rem>0</rem> </small></p>
                             @else
@@ -285,7 +285,7 @@ e{
 
                   <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Daño Tecnico</p>
                         </strong>
@@ -297,7 +297,7 @@ e{
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('baño', $ciclosos->daño)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
-                                    
+
                                     @if (empty($ciclosos->dañoout))
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Daño: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                 @else
@@ -315,7 +315,7 @@ e{
                     <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Evaluación</p>
                         </strong>
@@ -334,14 +334,14 @@ e{
                             @endif
                             </div>
                         </div>
-                    </div> 
+                    </div>
                   </div>
                   </div>
 
 
                   <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Retro</p>
                         </strong>
@@ -351,7 +351,7 @@ e{
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>                         
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
                                    @if (empty($ciclosos->retroout))
                                    <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Retro: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                    @else
@@ -366,7 +366,7 @@ e{
 
                     <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Reunión</p>
                         </strong>
@@ -376,12 +376,12 @@ e{
                             </div>
                             <div class="col-sm-6">
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>                         
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
                                 @if (empty($ciclosos->reunionout))
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Reunión: </b><rem class="tiemp-text">0</rem> </small></p>
                                 @else
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Reunión: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
-                                @endif 
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -391,7 +391,7 @@ e{
                   <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Baño</p>
                         </strong>
@@ -416,7 +416,7 @@ e{
 
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Calamidad Domestica</p>
                         </strong>
@@ -448,7 +448,7 @@ e{
 
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia médica</p>
                         </strong>
@@ -530,7 +530,7 @@ e{
                       .tiemp-text{
                         margin-left:10px;
                       }
-                      
+
         .style_card{
         width:100%;
         height:235px;

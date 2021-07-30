@@ -193,6 +193,7 @@
                 </body>
 
                @can('haveaccess','ciclo.index')
+
                 <form action="{{ url('/ciclo')}}" method="POST" enctype="multipart/form-data" class="form-horizontal">
                     {{csrf_field()}}
                <div class="card-boton">
@@ -205,15 +206,15 @@
                 <br><br> --}}
             </div>
         </form>
+@else
 
-        
 
-            
+
             @endcan
 
 
 
-            <div><input type="hidden" id="hora" name"hora" value="{{ $hora }}"> </div>
+            <div><input type="hidden" id="hora" name= "hora" value="{{ $hora }}"> </div>
             <div><input type="hidden" id= "nombre" name="nombre" value=" {{$user_nombre}}"></div>
             <div><input type="hidden" id= "cedula" name="cedula" value=" {{$user_cedula}}"></div>
             <div><input type="hidden" name="breakin" id="breakin"></div>
@@ -231,7 +232,7 @@
 
 
         <form action="{{ url('/ciclo')}}" method="POST" enctype="multipart/form-data" class="form-horizontal">
-            <div><input type="hidden" id="fecha" name"fecha" value="{{ $hoy }}"> </div>
+            <div><input type="hidden" id="fecha" name ="fecha" value="{{ $hoy }}"> </div>
            <div class="container">
 
                <div class="pull-right">
@@ -272,19 +273,30 @@
                             </tbody>
                          </table>
 
-<!---
+
+                         @if (empty($ciclo->ingreso))
+
+                         <p>
+                             Aun no hay registro del dia de hoy
+                         </p>
+
+
+                         @else
                          <script>
                             function desactiva_enlace(enlace)
                             {
                                 enlace.disabled='disabled';
                             }
-                        </script> -->
+                        </script>
+                         @endif
+
+
 
 </div>
 </div>
 
 
-       
+
 <br>
 <p style="text-align: center; aline-contents: center;"><i class="fa fa-copyright" aria-hidden="true">Todos los Derechos Reservados, Elaborado para Mentius S.A. Colombia 2021</i></p>
 </div>

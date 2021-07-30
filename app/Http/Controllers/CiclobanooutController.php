@@ -20,7 +20,7 @@ class CiclobanooutController extends Controller
     {
         $this->middleware('auth');
         Carbon::setlocale('co');
-    }    
+    }
     /**
      * Display a listing of the resource.
      *
@@ -137,12 +137,13 @@ class CiclobanooutController extends Controller
         $validatedData = $request->validate([
             'banoout'          => ['required|unique:ciclos,banoout'],
         ]);
-        
+
         $ciclosos = new Ciclo();
         $ciclosos->nombre            = $user_nombre;
         $ciclosos->cedula            = $user_cedula;
         $ciclosos->fecha             = $hoy;
-        $ciclosos->banoout          = $hora;
+        $ciclosos->banoout           = $hora;
+        $ciclosos->timebano          = $request->timebano ;
         $ciclosos->llave             = $llave;
 
         $ciclosos->save();
@@ -259,7 +260,7 @@ class CiclobanooutController extends Controller
 
 
         return view('ciclobanoout.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','date19','date20','date21','date22','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad','timeEmeMedica','timebano'));
-    
+
     }
 
     /**
@@ -304,6 +305,7 @@ class CiclobanooutController extends Controller
         $tiempoF = $carbon1->diffInMinutes($date6);
         $timecapa = ($tiempoF - $tiempoE);
 
+
         $date7 = $ciclosos->pausas;
         $date8 = $ciclosos->pausasout;
         $tiempoG = $carbon1->diffInMinutes($date7);
@@ -346,7 +348,7 @@ class CiclobanooutController extends Controller
         $tiempoR = $carbon1->diffInMinutes($date18);
         $timecalamidad = ($tiempoR - $tiempoQ);
 
-        
+
         $date19 = $ciclosos->EmeMedica;
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);

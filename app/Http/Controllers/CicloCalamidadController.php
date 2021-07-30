@@ -64,7 +64,6 @@ class CiclocalamidadController extends Controller
        $hora = Carbon::now()->format('H:i:s');
        $llave = $user_cedula. $hoy;
        $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
-       $ciclosos=Ciclo::findOrFail($id);
 
        $date1 = $ciclosos->breakin;
        $date2 = $ciclosos->breakout;
@@ -126,14 +125,25 @@ class CiclocalamidadController extends Controller
        $tiempoQ = $carbon1->diffInMinutes($date17);
        $tiempoR = $carbon1->diffInMinutes($date18);
        $timecalamidad = ($tiempoR - $tiempoQ);
-       $timecalamidad = number_format($timecalamidad,1,'.',',');
+
+       $date19 = $ciclosos->EmeMedica;
+       $date20 = $ciclosos->EmeMedicaout;
+       $tiempoV = $carbon1->diffInMinutes($date19);
+       $tiempoW = $carbon1->diffInMinutes($date20);
+       $timeEmeMedica = ($tiempoV - $tiempoW);
+
+       $date21 = $ciclosos->bano;
+       $date22 = $ciclosos->banoout;
+       $tiempoX = $carbon1->diffInMinutes($date21);
+       $tiempoY = $carbon1->diffInMinutes($date22);
+       $timebano = ($tiempoY - $tiempoX);
 
        $ingreso =$ciclosos->ingreso;
        $salida  =$ciclosos->salida;
-       $timelunch = $ciclosos->timelunch;
+       $timeluch = $ciclosos->timelunch;
        $ingresoA = $carbon1->diffInHours($ingreso);
        $salidaB = $carbon1->diffInHours($salida);
-       $total = ($salidaB - $ingresoA)-$timelunch;
+       $total = ($salidaB - $ingresoA)-$timeluch;
        $total = number_format($total,1,'.',',');
 
         $user_id = Auth::user()->cedula;
@@ -151,7 +161,7 @@ class CiclocalamidadController extends Controller
         $ciclosos->llave             = $llave;
 
         $ciclosos->save();
-        return calamidad;
+        return back();
 
     }
 
@@ -186,7 +196,6 @@ class CiclocalamidadController extends Controller
        $hora = Carbon::now()->format('H:i:s');
        $llave = $user_cedula. $hoy;
        $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
-       $ciclosos=Ciclo::findOrFail($id);
 
        $date1 = $ciclosos->breakin;
        $date2 = $ciclosos->breakout;
@@ -248,16 +257,28 @@ class CiclocalamidadController extends Controller
        $tiempoQ = $carbon1->diffInMinutes($date17);
        $tiempoR = $carbon1->diffInMinutes($date18);
        $timecalamidad = ($tiempoR - $tiempoQ);
-       $timecalamidad = number_format($timecalamidad,1,'.',',');
 
+       $date19 = $ciclosos->EmeMedica;
+       $date20 = $ciclosos->EmeMedicaout;
+       $tiempoV = $carbon1->diffInMinutes($date19);
+       $tiempoW = $carbon1->diffInMinutes($date20);
+       $timeEmeMedica = ($tiempoV - $tiempoW);
+
+       $date21 = $ciclosos->bano;
+       $date22 = $ciclosos->banoout;
+       $tiempoX = $carbon1->diffInMinutes($date21);
+       $tiempoY = $carbon1->diffInMinutes($date22);
+       $timebano = ($tiempoY - $tiempoX);
 
        $ingreso =$ciclosos->ingreso;
        $salida  =$ciclosos->salida;
-       $timelunch = $ciclosos->timelunch;
+       $timeluch = $ciclosos->timelunch;
        $ingresoA = $carbon1->diffInHours($ingreso);
        $salidaB = $carbon1->diffInHours($salida);
-       $total = ($salidaB - $ingresoA)-$timelunch;
+       $total = ($salidaB - $ingresoA)-$timeluch;
        $total = number_format($total,1,'.',',');
+
+
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
         $user_cedula = Auth::user()->cedula;
@@ -266,7 +287,7 @@ class CiclocalamidadController extends Controller
         $llave = $user_cedula. $hoy;
         $ciclosos = Ciclo::findOrFail($id);
 
-        return view('ciclocalamidad.edit',compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad'));
+        return view('ciclocalamidad.edit',compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','date19','date20','date21','date22','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad','timeEmeMedica','timebano'));
 
     }
 
@@ -350,27 +371,37 @@ class CiclocalamidadController extends Controller
         $timereunion = ($tiempoP - $tiempoO);
         $timereunion = number_format($timereunion,1,'.',',');
 
-       $date17 = $ciclosos->calamidad;
-       $date18 = $ciclosos->calamidadout;
-       $tiempoQ = $carbon1->diffInMinutes($date17);
-       $tiempoR = $carbon1->diffInMinutes($date18);
-       $timecalamidad = ($tiempoR - $tiempoQ);
-       $timecalamidad = number_format($timecalamidad,1,'.',',');
+        $date17 = $ciclosos->calamidad;
+        $date18 = $ciclosos->calamidadout;
+        $tiempoQ = $carbon1->diffInMinutes($date17);
+        $tiempoR = $carbon1->diffInMinutes($date18);
+        $timecalamidad = ($tiempoR - $tiempoQ);
+
+        $date19 = $ciclosos->EmeMedica;
+        $date20 = $ciclosos->EmeMedicaout;
+        $tiempoV = $carbon1->diffInMinutes($date19);
+        $tiempoW = $carbon1->diffInMinutes($date20);
+        $timeEmeMedica = ($tiempoV - $tiempoW);
+
+        $date21 = $ciclosos->bano;
+        $date22 = $ciclosos->banoout;
+        $tiempoX = $carbon1->diffInMinutes($date21);
+        $tiempoY = $carbon1->diffInMinutes($date22);
+        $timebano = ($tiempoY - $tiempoX);
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
+        $timeluch = $ciclosos->timelunch;
         $ingresoA = $carbon1->diffInHours($ingreso);
         $salidaB = $carbon1->diffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
-        
 
         $datoscalamidad = request()->except(['_token','_method']);
         Ciclo::where('id','=',$id)->update($datoscalamidad);
   //return response()->json($ciclosos);
-    return view('ciclocalamidadout.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date17','date18','date16','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad'));
+    return view('ciclocalamidadout.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','date19','date20','date21','date22','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad','timeEmeMedica','timebano'));
      //return back();
     }
 

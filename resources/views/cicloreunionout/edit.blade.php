@@ -127,7 +127,7 @@ border: none;
         <div class="row">
         <div class="card" style="background-color: transparent; width:100%" >
                 <center>  <body input type ="time" style="font-size: 20px;  border-radius:0.75rem;" onload="HoraActual(<?php echo date("H").", ".date("i").", ".date("s"); ?>)" >
-                 
+
                     <link rel="shortcut icon" href="">
             <div style=" margin-left:0;">
                 <script>
@@ -155,7 +155,7 @@ border: none;
         <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Turno</p>
                         </strong>
@@ -163,7 +163,7 @@ border: none;
                             <div class="col-sm-6">
                                 <img src="\theme\images\turno.png" alt="" style="width: 140px; heigth:120px; margen-left: 23rem;">
                             </div>
-                            <div class="col-sm-6">        
+                            <div class="col-sm-6">
                         <p class="card-text"><small class="text-muted2"><b>Inicio: </b>&nbsp; <e> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
                         <p class="card-text"><small class="text-muted2"><b>Fin: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('salida', $ciclosos->salida)}}</e> </small></p>
                         <p class="card-text"><small class="text-muted2"><b>Tiempo de Conexión </b>  {{ old('total', $ciclosos->total)}}<b>minutos</b></small></p>
@@ -177,7 +177,7 @@ border: none;
 
                     <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Break</p>
                         </strong>
@@ -194,11 +194,11 @@ border: none;
                       </div>
                       </div>
                       </div>
-                      
+
 
                       <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Almuerzo</p>
                         </strong>
@@ -222,7 +222,7 @@ border: none;
                       <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Capacitación</p>
                         </strong>
@@ -235,8 +235,8 @@ border: none;
                             <div class="col-sm-6">
                             <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <e> {{ old('capacitacion', $ciclosos->capacitacion)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('capout', $ciclosos->capout)}}</e> </small></p>
-                              
-                                
+
+
                                 <p class="card-text"><small class="text-muted2"><b>Tiempo de Capacitación</b> {{ old('timecap', $ciclosos->timecap)}} </small></p>
                             </div>
                         </div>
@@ -247,7 +247,7 @@ border: none;
 
                   <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Pausas Activas</p>
                         </strong>
@@ -259,7 +259,7 @@ border: none;
                             <div class="col-sm-6">
                                 <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <e> {{ old('pausas', $ciclosos->pausas)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
-                                
+
                             <p class="card-text"><small class="text-muted2"><b>Tiempo de Pausas Activas</b>  {{ old('timepausas', $ciclosos->timepausas)}} </small></p>
                         </div>
                     </div>
@@ -271,7 +271,7 @@ border: none;
 
                   <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Daño Tecnico</p>
                         </strong>
@@ -283,8 +283,8 @@ border: none;
                             <div class="col-sm-6">
                                 <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <e> {{ old('baño', $ciclosos->daño)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
-                                    
-                                   
+
+
                                 <p class="card-text"><small class="text-muted2"><b>Tiempo de Daño de Equipo</b> {{ old('timedaño', $ciclosos->timedaño)}} </small></p>
                             </div>
                         </div>
@@ -296,7 +296,7 @@ border: none;
                     <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Evaluación</p>
                         </strong>
@@ -308,7 +308,7 @@ border: none;
                                 <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp;&nbsp;<e> {{ old('evaluacion', $ciclosos->evaluacion)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
 
-                                    
+
                             </div>
                         </div>
                     </div>
@@ -319,7 +319,7 @@ border: none;
 
                 <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Retro</p>
                         </strong>
@@ -329,8 +329,8 @@ border: none;
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp;&nbsp;<e> {{ old('retro', $ciclosos->retro)}} </e></small></p>
-                                <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>                         
-                                   
+                                <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
+
                                 <p class="card-text"><small class="text-muted2"><b>Tiempo de Retroalimentacion</b>  {{ old('timeretro', $ciclosos->timeretro)}} </small></p>
                             </div>
                         </div>
@@ -355,7 +355,7 @@ border: none;
                                 <form action="{{url('/cicloreunionout/'.$ciclosos->id)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                     {{csrf_field()}}
                                     @method('PATCH')
-                            
+
                                     <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
                                     <div><input type="hidden" id="hoy" name"hoy" value="{{ $hoy }}"> </div>
                                     <div><input type="hidden" id="hora" name"hora" value="{{ $hora }}"> </div>
@@ -383,7 +383,7 @@ border: none;
                   <style>
                       .prueba-btn{
                           width: 150px;
-                          
+
                       }
 
                       .reloj-text{
@@ -403,7 +403,7 @@ border: none;
                   <div class="row">
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Baño</p>
                         </strong>
@@ -414,7 +414,7 @@ border: none;
                             <div class="col-sm-6">
                                 <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp; <e> {{ old('evaluacion', $ciclosos->evaluacion)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -423,7 +423,7 @@ border: none;
 
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Calamidad Domestica</p>
                         </strong>
@@ -436,7 +436,7 @@ border: none;
                                 <p class="card-text"><small class="text-muted2"><b>Inicio:</b>&nbsp;&nbsp; <e> {{ old('retro', $ciclosos->retro)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
 
-                               
+
                             </div>
                         </div>
 
@@ -446,7 +446,7 @@ border: none;
 
             <div class="col-sm-4 style_card">
                 <div class="card-space style_card">
-                    <div class="card-bodyNew style_card">
+                    <div class="card-bodyNew1 style_card">
                         <strong>
                             <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia médica</p>
                         </strong>
@@ -511,8 +511,8 @@ border: none;
               @section('js')
       <script>
       Swal.fire(
-        'QUE SEA UNA OPORTUNIDAD PARA VOLVER A VER ROSTROS CONOCIDOS',
-        'REGISTRA EL TIEMPO DE REUNIÓN',
+        'REGISTRA EL FIN DE LA REUNION',
+        'AL DAR CLIK EN EL BOTON FIN SE TERMINA EL CONTEO DE TIEMPO DE REUNION',
         'success'
       )
       </script>
