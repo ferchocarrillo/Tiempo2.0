@@ -116,24 +116,48 @@ box-shadow:5px  10px #1c4c64;
         color: #1c4c64;
 
     }
+
+    .inputs-1{
+   border-radius: 0.75rem;
+   display: block;
+   width: 300px;
+   height: calc(2.25rem + 2px);
+   padding: 0.375rem 0.75rem;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   text-transform: capitalize;
+   margin-left: 4rem;
+}
+.buscador{
+   color:aliceblue;
+   background:rgb(8, 147, 240);
+   width: auto;
+   height: 35px;
+   border-radius: 0.75rem;
+   font-size: 18px;
+}
                 </style>
 
                 </body>
 
-                <div class="col-md-4">
-                      <form action="/searchpersonalgeneral" method="GET">
-                    {{csrf_field()}}
-                <div class="input-group">
-        <input type="searchpersonalgeneral" name="searchpersonalgeneral" class="form-control">
-        <span class="input-group-prepend">
-            <button type="submit" class="btn btn-primary">Buscar por documento</button>
-            </span>
-        </div>
-    </form>
-</div>
-
-
-
+                <div class="row">
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <form action="/searchpersonalgeneral" method="GET">
+                                {{csrf_field()}}
+                                <input type="search" name="searchpersonalgeneral" class="inputs-1">
+                                </div>
+                                <button type="submit" class="buscador"><i class="fas fa-search"></i>Buscar por documento</button>
+                            </form>
+                        </div>
+                    </div>
 
             <div><input type="hidden" id="hora" name"hora" value="{{ $hora }}"> </div>
             <div><input type="hidden" id= "nombre" name="nombre" value=" {{$user_nombre}}"></div>
@@ -141,7 +165,7 @@ box-shadow:5px  10px #1c4c64;
             <div><input type="hidden" name="reunion" id="reunion" value="{{ $llave }}"></div>
 
 
-            
+
 
 
         <form action="{{ url('/ciclo')}}" method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -152,7 +176,7 @@ box-shadow:5px  10px #1c4c64;
                        <div class="card" style="background-image: linear-gradient(#EAF2F8, #AAB7B8);">
 
 
-      
+
             <br>
            <table class="table table-ligth table-hover">
             <thead class="thead-dark">
@@ -225,7 +249,7 @@ Swal.fire(
            width: 520px;
            height: 100px;
            border: 4px solid #cfd0d0;
-        
+
     }
 </style>
 

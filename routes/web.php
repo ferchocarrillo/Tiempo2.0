@@ -77,6 +77,11 @@ use Illuminate\Support\Facades\Gate;
 
     Route::get('/searchpersonalgeneral','PersonalActivoController@searchpersonalgeneral');
 
+    Route::get('/searchfecha','HistoricoController@searchfecha');
+    Route::get('/searchname','HistoricoController@searchname');
+    Route::get('/searchcedula','HistoricoController@searchcedula');
+    Route::get('/searchentre','HistoricoController@searchentre');
+
 
 
 

@@ -109,6 +109,58 @@ box-shadow:5px  10px #1c4c64;
     font-style: normal;
 
     }
+    .inputs-1{
+   border-radius: 0.75rem;
+   display: block;
+   width: 200px;
+   height: calc(2.25rem + 2px);
+   padding: 0.375rem 0.75rem;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   text-transform: capitalize;
+   margin-left: 0rem;
+}
+.inputs-2{
+   border-radius: 0.75rem;
+   display: block;
+   width: 150px;
+   height: calc(2.25rem + 2px);
+   padding: 0.375rem 0.75rem;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   text-transform: capitalize;
+   margin-left: 0rem;
+}
+.buscador{
+   color:aliceblue;
+   background:rgb(8, 147, 240);
+   width: auto;
+   height: 35px;
+   border-radius: 0.75rem;
+   font-size: 18px;
+}
+.buscador1{
+   color:aliceblue;
+   background:rgb(8, 147, 240);
+   width: auto;
+   height: 70px;
+   border-radius: 0.75rem;
+   font-size: 18px;
+}
                 </style>
 
                 </body>
@@ -130,6 +182,67 @@ box-shadow:5px  10px #1c4c64;
             <div><input type="hidden" name="retro" id="retro"></div>
             <div><input type="hidden" name="reunion" id="reunion"></div>
             <div><input type="hidden" name="reunion" id="reunion" value="{{ $llave }}"></div>
+
+            <fieldset class="form-group">
+                <div class="container" >
+                    <div class="card" style="background-image: linear-gradient(#EAF2F8, #AAB7B8);">
+
+            <div class="pull-right">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <form action="/searchfecha" method="GET">
+                            {{csrf_field()}}
+                            <input type="date" name="searchfecha" class="inputs-1">
+                            </div>
+                            <button type="submit" class="buscador"><i class="fas fa-search"></i>Buscar por Fecha</button>
+                        </form>
+                        <div class="form-outline">
+                            <form action="/searchname" method="GET">
+                                {{csrf_field()}}
+                                <input type="search" name="searchname" class="inputs-1">
+                                </div>
+                                <button type="submit" class="buscador"><i class="fas fa-search"></i>Buscar por Nombre</button>
+                            </form>
+
+                            <div class="form-outline">
+                                <form action="/searchcedula" method="GET">
+                                    {{csrf_field()}}
+                                    <input type="search" name="searchcedula" class="inputs-1">
+                                    </div>
+                                    <button type="submit" class="buscador"><i class="fas fa-search"></i>Buscar por Cedula</button>
+                                </form>
+
+                        </div>
+                    </div>
+</div>
+</div>
+</fieldset>
+
+
+<fieldset class="form-group">
+    <div class="container">
+        <div class="card" style="background-image: linear-gradient(#b7cad8, #3f8d92); width:420px; ">
+<div class="row">
+    <div class="input-group">
+        <div class="form-outline">
+            <form action="/searchentre" method="GET">
+                {{csrf_field()}}
+                <label for="from">Desde</label>
+                <input type="date" name="searchfrom" class="inputs-2">
+                </div>
+            <div class="form-outline">
+                <label for="to">Hasta</label>
+                <input type="date" name="searchto" class="inputs-2">
+                    </div>
+                    <button type="submit" class="buscador1"><i class="fas fa-search"></i>Entre fechas</button>
+                </form>
+
+
+            </div>
+        </div>
+</div>
+</div>
+</fieldset>
 
 
 
