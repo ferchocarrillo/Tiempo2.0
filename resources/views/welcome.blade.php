@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Gestor de Tiempos</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -116,7 +116,7 @@ background-size:cover;
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{asset('theme/images/icon/isotipo.png')}}" alt="CoolAdmin" width="350px">
+                    <img src="{{asset('\theme\images\logo_blanco.png')}}" alt="CoolAdmin" width="350px">
 
                     <h4 style="color:#FFFFFF;">Sistema de Gestion de Tiempos</h4>
                 </div>
