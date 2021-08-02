@@ -59,6 +59,7 @@ class CicloRetroOutController extends Controller
         $hora = Carbon::now()->format('H:i:s');
         $llave = $user_cedula. $hoy;
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
+        $ciclosos=Ciclo::findOrFail($id);
 
         $date1 = $ciclosos->breakin;
         $date2 = $ciclosos->breakout;
@@ -195,6 +196,7 @@ class CicloRetroOutController extends Controller
         $hora = Carbon::now()->format('H:i:s');
         $llave = $user_cedula. $hoy;
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
+        $ciclosos=Ciclo::findOrFail($id);
 
         $date1 = $ciclosos->breakin;
         $date2 = $ciclosos->breakout;
