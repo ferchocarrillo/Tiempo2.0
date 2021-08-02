@@ -52,12 +52,8 @@ class CicloSalidaController extends Controller
      */
     public function store(CicloRequest $request, Ciclo $ciclosos)
     {
-
-
         Carbon::setLocale('co');
         Carbon::now();
-
-        //convertimos la fecha 1 a objeto Carbon
         $hoy = Carbon::now();
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
@@ -147,6 +143,8 @@ class CicloSalidaController extends Controller
         $salidaB = $carbon1->diffInHours($salida);
         $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
+
+
         $request->validate([
             'llave'          => ['required|unique:ciclos,llave'],
         ]);
@@ -184,13 +182,8 @@ class CicloSalidaController extends Controller
      */
     public function edit(Request $request, $id)
     {
-
-        date_default_timezone_set('America/Bogota');
-
         Carbon::setLocale('co');
         Carbon::now();
-
-        //convertimos la fecha 1 a objeto Carbon
         $hoy = Carbon::now();
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
@@ -199,7 +192,6 @@ class CicloSalidaController extends Controller
         $hora = Carbon::now()->format('H:i:s');
         $llave = $user_cedula. $hoy;
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
-        $ciclosos=Ciclo::findOrFail($id);
 
         $date1 = $ciclosos->breakin;
         $date2 = $ciclosos->breakout;
@@ -261,30 +253,25 @@ class CicloSalidaController extends Controller
         $tiempoQ = $carbon1->diffInMinutes($date17);
         $tiempoR = $carbon1->diffInMinutes($date18);
         $timecalamidad = ($tiempoR - $tiempoQ);
-        $timecalamidad = number_format($timecalamidad,1,'.',',');
 
         $date19 = $ciclosos->EmeMedica;
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);
         $tiempoW = $carbon1->diffInMinutes($date20);
         $timeEmeMedica = ($tiempoV - $tiempoW);
-        $timeEmeMedica = number_format($timeEmeMedica,1,'.',',');
 
         $date21 = $ciclosos->bano;
         $date22 = $ciclosos->banoout;
         $tiempoX = $carbon1->diffInMinutes($date21);
         $tiempoY = $carbon1->diffInMinutes($date22);
         $timebano = ($tiempoY - $tiempoX);
-        $timebano = number_format($timebano,1,'.',',');
-
-
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
 
@@ -299,12 +286,11 @@ class CicloSalidaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {   date_default_timezone_set('America/Bogota');
+    {
 
+        date_default_timezone_set('America/Bogota');
         Carbon::setLocale('co');
         Carbon::now();
-
-        //convertimos la fecha 1 a objeto Carbon
         $hoy = Carbon::now();
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
@@ -386,7 +372,7 @@ class CicloSalidaController extends Controller
 
        $date21 = $ciclosos->bano;
        $date22 = $ciclosos->bano;
-       $tiempoX = $carbon1->diffInMinutes($date11);
+       $tiempoX = $carbon1->diffInMinutes($date21);
        $tiempoY = $carbon1->diffInMinutes($date22);
        $timebano = ($tiempoY - $tiempoX);
        $timebano = number_format($timebano,1,'.',',');

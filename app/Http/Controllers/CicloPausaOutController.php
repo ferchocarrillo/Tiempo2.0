@@ -52,8 +52,6 @@ class CicloPausaOutController extends Controller
     {
         Carbon::setLocale('co');
         Carbon::now();
-
-        //convertimos la fecha 1 a objeto Carbon
         $hoy = Carbon::now();
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
@@ -61,7 +59,6 @@ class CicloPausaOutController extends Controller
         $hoy = Carbon::now()->format('Y-m-d');
         $hora = Carbon::now()->format('H:i:s');
         $llave = $user_cedula. $hoy;
-        $ciclosos=Ciclo::findOrFail($id);
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
 
         $date1 = $ciclosos->breakin;
@@ -119,6 +116,24 @@ class CicloPausaOutController extends Controller
         $timereunion = ($tiempoP - $tiempoO);
         $timereunion = number_format($timereunion,1,'.',',');
 
+        $date17 = $ciclosos->calamidad;
+        $date18 = $ciclosos->calamidadout;
+        $tiempoQ = $carbon1->diffInMinutes($date17);
+        $tiempoR = $carbon1->diffInMinutes($date18);
+        $timecalamidad = ($tiempoR - $tiempoQ);
+
+        $date19 = $ciclosos->EmeMedica;
+        $date20 = $ciclosos->EmeMedicaout;
+        $tiempoV = $carbon1->diffInMinutes($date19);
+        $tiempoW = $carbon1->diffInMinutes($date20);
+        $timeEmeMedica = ($tiempoV - $tiempoW);
+
+        $date21 = $ciclosos->bano;
+        $date22 = $ciclosos->banoout;
+        $tiempoX = $carbon1->diffInMinutes($date21);
+        $tiempoY = $carbon1->diffInMinutes($date22);
+        $timebano = ($tiempoY - $tiempoX);
+
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
         $timeluch = $ciclosos->timelunch;
@@ -126,13 +141,6 @@ class CicloPausaOutController extends Controller
         $salidaB = $carbon1->diffInHours($salida);
         $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
-
-        $date5 = $ciclosos->pausas;
-        $date6 = $ciclosos->pausasout;
-        $tiempoE = $carbon1->diffInMinutes($date5);
-        $tiempoF = $carbon1->diffInMinutes($date6);
-        $timepausas = ($tiempoF - $tiempoE);
-        $timepausas = number_format($timepausas,1,'.',',');
 
         $validatedData = $request->validate([
             'pausas'          => ['required|unique:ciclos,pausas'],
@@ -170,12 +178,8 @@ class CicloPausaOutController extends Controller
     public function edit(Request $request, $id)
     {
 
-        date_default_timezone_set('America/Bogota');
-
         Carbon::setLocale('co');
         Carbon::now();
-
-        //convertimos la fecha 1 a objeto Carbon
         $hoy = Carbon::now();
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
@@ -184,7 +188,6 @@ class CicloPausaOutController extends Controller
         $hora = Carbon::now()->format('H:i:s');
         $llave = $user_cedula. $hoy;
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
-        $ciclosos=Ciclo::findOrFail($id);
 
         $date1 = $ciclosos->breakin;
         $date2 = $ciclosos->breakout;
@@ -241,16 +244,33 @@ class CicloPausaOutController extends Controller
         $timereunion = ($tiempoP - $tiempoO);
         $timereunion = number_format($timereunion,1,'.',',');
 
+        $date17 = $ciclosos->calamidad;
+        $date18 = $ciclosos->calamidadout;
+        $tiempoQ = $carbon1->diffInMinutes($date17);
+        $tiempoR = $carbon1->diffInMinutes($date18);
+        $timecalamidad = ($tiempoR - $tiempoQ);
+
+        $date19 = $ciclosos->EmeMedica;
+        $date20 = $ciclosos->EmeMedicaout;
+        $tiempoV = $carbon1->diffInMinutes($date19);
+        $tiempoW = $carbon1->diffInMinutes($date20);
+        $timeEmeMedica = ($tiempoV - $tiempoW);
+
+        $date21 = $ciclosos->bano;
+        $date22 = $ciclosos->banoout;
+        $tiempoX = $carbon1->diffInMinutes($date21);
+        $tiempoY = $carbon1->diffInMinutes($date22);
+        $timebano = ($tiempoY - $tiempoX);
+
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
-
-        return view('ciclopausasout.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion'));
+        return view('ciclopausasout.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','date19','date20','date21','date22','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad','timeEmeMedica','timebano'));
         // return view('ciclo.index' ,compact('ciclosos','hoy','hora','llave','user_nombre','user_cedula','tiempo2','tiempo3'));
         //return back();
     }
@@ -264,11 +284,8 @@ class CicloPausaOutController extends Controller
     public function update(Request $request, $id)
     {
         date_default_timezone_set('America/Bogota');
-
         Carbon::setLocale('co');
         Carbon::now();
-
-        //convertimos la fecha 1 a objeto Carbon
         $hoy = Carbon::now();
         $user_id = Auth::user()->cedula;
         $user_nombre = Auth::user()->name;
@@ -300,7 +317,12 @@ class CicloPausaOutController extends Controller
         $timecapa = ($tiempoF - $tiempoE);
         $timecapa = number_format($timecapa,1,'.',',');
 
-
+        $date7 = $ciclosos->pausas;
+        $date8 = $ciclosos->pausasout;
+        $tiempoG = $carbon1->diffInMinutes($date7);
+        $tiempoH = $carbon1->diffInMinutes($date8);
+        $timepausas = ($tiempoH - $tiempoG);
+        $timepausas = number_format($timepausas,1,'.',',');
 
         $date9 = $ciclosos->daño;
         $date10 = $ciclosos->dañoout;
@@ -329,25 +351,39 @@ class CicloPausaOutController extends Controller
         $timereunion = ($tiempoP - $tiempoO);
         $timereunion = number_format($timereunion,1,'.',',');
 
+        $date17 = $ciclosos->calamidad;
+        $date18 = $ciclosos->calamidadout;
+        $tiempoQ = $carbon1->diffInMinutes($date17);
+        $tiempoR = $carbon1->diffInMinutes($date18);
+        $timecalamidad = ($tiempoR - $tiempoQ);
+        $timecalamidad = number_format($timecalamidad,1,'.',',');
+
+        $date19 = $ciclosos->EmeMedica;
+        $date20 = $ciclosos->EmeMedicaout;
+        $tiempoV = $carbon1->diffInMinutes($date19);
+        $tiempoW = $carbon1->diffInMinutes($date20);
+        $timeEmeMedica = ($tiempoV - $tiempoW);
+        $timeEmeMedica = number_format($timeEmeMedica,1,'.',',');
+
+       $date21 = $ciclosos->bano;
+       $date22 = $ciclosos->bano;
+       $tiempoX = $carbon1->diffInMinutes($date21);
+       $tiempoY = $carbon1->diffInMinutes($date22);
+       $timebano = ($tiempoY - $tiempoX);
+       $timebano = number_format($timebano,1,'.',',');
+
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
         $timelunch = $ciclosos->timelunch;
         $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
+        $salidaB  = $carbon1->floatDiffInHours($salida);
         $total = ($salidaB - $ingresoA)-$timelunch;
         $total = number_format($total,1,'.',',');
-
-        $date7 = $ciclosos->pausas;
-        $date8 = $ciclosos->pausasout;
-        $tiempoG = $carbon1->diffInMinutes($date7);
-        $tiempoH = $carbon1->diffInMinutes($date8);
-        $timepausas = ($tiempoH - $tiempoG);
-        $timepausas = number_format($timepausas,1,'.',',');
 
         $datosCiclo =request()->except(['_token','_method']);
         Ciclo::where('id','=',$id)->update($datosCiclo);
    //return response()->json($ciclosos);
-     return view('ciclosalida.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion'));
+     return view('ciclosalida.edit', compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','date19','date20','date21','date22','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad','timeEmeMedica','timebano'));
      //return back();
     }
 
