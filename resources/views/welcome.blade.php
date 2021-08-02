@@ -67,23 +67,21 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-body{
-
-position: relative;
+.body{
+position: flex;
 border-radius: 2.75em;
 font-family: 'Nunito', sans-serif;
 font-weight: 200;
 height: 100vh;
 margin: 0;
-background-color: transparent;
-background-image: url('https://i.gifer.com/Vj7m.gif');
 background-repeat:no-repeat;
-background-size:cover;
+background-image: URL("\theme\images\reloj2.gif");
 
 }
 
 .content{
-    background: url('theme\images\reloj.gif')
+    background: transparent;
+
 }
 
 .btn-index1{
@@ -102,7 +100,6 @@ background-size:cover;
                 height:500px;
                 color:#2596be;
                 border-radius: 0.75rem;
-
  };
 
         </style>
@@ -120,11 +117,13 @@ background-size:cover;
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content" >
                 <div class="title m-b-md">
+
+
                     <img src="{{('\theme\images\logo_blanco.png')}}" alt="" width="650px">
 
-                    <h4 style="color:#FFFFFF;">Sistema de Gestion de Tiempos</h4>
+                    <h4>Sistema de Gestion de Tiempos</h4>
                 </div>
 
                 <div class="links">
