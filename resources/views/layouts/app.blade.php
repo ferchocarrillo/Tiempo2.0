@@ -19,6 +19,31 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
+<style>
+    .card-login {
+        background: #085065;
+    border-radius: 1rem;
+    color:white;
+    font-size: 22px;
+    border:#5cacbc 3px solid;
+    }
+    a{
+        color: #5cacbc;
+
+    }
+    .card-header{
+background:  #4d7481;
+    }
+    .container{
+
+    }
+    html body {
+        background: #b6bcbc;
+    }
+
+
+   </style>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -52,14 +77,14 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Logueo') }}</a>
-                            </li>
-                            @if (Route::has('register'))
+                            </li> --}}
+                            {{-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Registro') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

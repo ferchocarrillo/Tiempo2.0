@@ -60,6 +60,7 @@ class CiclobanooutController extends Controller
         $llave = $user_cedula. $hoy;
 
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
+        $ciclosos=Ciclo::findOrFail($id);
 
 
         // $date1 = $ciclosos->breakin;

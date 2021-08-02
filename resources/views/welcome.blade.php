@@ -51,11 +51,17 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+
+                font-size: 22px;
+                background: #2596be;
+                width: 500px;
+                height:500px;
+                color:#ffffff;
+                border-radius: 0.75rem;
             }
 
             .m-b-md {
@@ -74,15 +80,30 @@ background-image: url('https://i.gifer.com/Vj7m.gif');
 background-repeat:no-repeat;
 background-size:cover;
 
-
-
-
-
 }
 
 .content{
     background: url('theme\images\reloj.gif')
 }
+
+.btn-index1{
+                font-size: 22px;
+                background: #2596be;
+                width: 500px;
+                height:500px;
+                color:#ffffff;
+                border-radius: 0.75rem;
+
+            }
+ .btn-index1:hover{
+    font-size: 22px;
+                background: #eeeee4;
+                width: 500px;
+                height:500px;
+                color:#2596be;
+                border-radius: 0.75rem;
+
+ };
 
         </style>
     </head>
@@ -92,31 +113,16 @@ background-size:cover;
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a class="btn-index"  href="{{ url('/home') }}">Inicio</a>
+                        <a class="btn-index1"  href="{{ url('/home') }}">Inicio</a>
                     @else
-                        <a class="btn-index"  href="{{ route('login') }}">Logueo</a>
-
-
-
-
-
+                        <a class="btn-index1"  href="{{ route('login') }}">Logueo</a>
                     @endauth
-
-                    <style>
-            .btn-index{
-                background-image: url('https://image.shutterstock.com/image-vector/login-button-260nw-369107741.jpg');
-                width: 500px;
-                height:500px;
-                background-color:red;
-                color:#FFFFFF;
-            }
-        </style>
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{asset('\theme\images\logo_blanco.png')}}" alt="CoolAdmin" width="350px">
+                    <img src="{{('\theme\images\logo_blanco.png')}}" alt="" width="650px">
 
                     <h4 style="color:#FFFFFF;">Sistema de Gestion de Tiempos</h4>
                 </div>

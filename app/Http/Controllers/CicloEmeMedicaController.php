@@ -137,7 +137,7 @@ class CicloEmeMedicaController extends Controller
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);
         $tiempoW = $carbon1->diffInMinutes($date20);
-        $timeEmeMedica = ($tiempoV - $tiempoW);
+        $timeEmeMedica = ($tiempoW - $tiempoV);
 
         $date21 = $ciclosos->bano;
         $date22 = $ciclosos->banoout;
@@ -271,7 +271,7 @@ class CicloEmeMedicaController extends Controller
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);
         $tiempoW = $carbon1->diffInMinutes($date20);
-        $timeEmeMedica = ($tiempoV - $tiempoW);
+        $timeEmeMedica = ($tiempoW - $tiempoV);
 
         $date21 = $ciclosos->bano;
         $date22 = $ciclosos->banoout;
@@ -389,7 +389,7 @@ class CicloEmeMedicaController extends Controller
           $date20 = $ciclosos->EmeMedicaout;
           $tiempoV = $carbon1->diffInMinutes($date19);
           $tiempoW = $carbon1->diffInMinutes($date20);
-          $timeEmeMedica = ($tiempoV - $tiempoW);
+          $timeEmeMedica = ($tiempoW - $tiempoV);
 
           $date21 = $ciclosos->bano;
           $date22 = $ciclosos->banoout;
