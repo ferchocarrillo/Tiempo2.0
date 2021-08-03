@@ -797,7 +797,7 @@ align-self: center;
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('bano', $ciclosos->bano)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Salida:</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
                                 @if (empty($ciclosos->banoout))
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                 @else
@@ -825,7 +825,7 @@ align-self: center;
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('bano', $ciclosos->bano)}} </e></small></p>
-                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Salida:</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
+                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
                                                         @if (empty($ciclosos->banoout))
                                                         <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                                         @else
@@ -856,7 +856,7 @@ align-self: center;
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Salida:</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
                                 @if (empty($ciclosos->calamidadout))
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                 @else
@@ -883,7 +883,7 @@ align-self: center;
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Salida:</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
                                                     @if (empty($ciclosos->calamidadout))
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                                     @else
@@ -913,7 +913,7 @@ align-self: center;
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('EmeMedica', $ciclosos->EmeMedica)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Salida:</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
 
 
 
@@ -942,7 +942,7 @@ align-self: center;
                             </div>
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('EmeMedica', $ciclosos->EmeMedica)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Salida:</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
 
 
 

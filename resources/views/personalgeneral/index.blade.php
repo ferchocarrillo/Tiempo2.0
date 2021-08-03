@@ -147,6 +147,9 @@ box-shadow:5px  10px #1c4c64;
 
                 </body>
 
+
+                @can('haveaccess','personalgeneral.index')
+
                 <div class="row">
                     <div class="input-group">
                         <div class="form-outline">
@@ -219,6 +222,14 @@ box-shadow:5px  10px #1c4c64;
     para descargar en Excel la base de Tiempos de los colaboradores
     </p>
 </div>
+
+    @else
+<img src="\theme\images\sinacceso.png" alt="solo personal autorizado" style="border-radius: 0.75rem; width: 350px;">
+<br>
+@endcan
+
+
+
 
 
 <br>
