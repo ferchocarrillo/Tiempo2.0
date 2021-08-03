@@ -434,10 +434,10 @@ e{
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
 
-                                @if (empty($ciclosos->retroout))
+                                @if (empty($ciclosos->calamidadout))
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timeretro }}</rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
                                 @endif
 
                             </div>

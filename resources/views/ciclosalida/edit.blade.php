@@ -20,6 +20,8 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     align-content: center;
+    max-width: 16rem;
+    min-width: 12rem;
 
 
 }
@@ -289,11 +291,11 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:</b><e class="tiemp-text">{{ old('breakout', $ciclosos->breakout)}}</e> </small></p>
 
                                 @if ($timebreak > 20)
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Break</b><rem2 class="tiemp-text">{{ $timebreak }}</rem2><b> minutos</b></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo</b><rem2 class="tiemp-text">{{ $timebreak }}</rem2><b> minutos</b></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Break</b><rem class="tiemp-text"> {{ $timebreak }}</rem><b> minutos</b></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo</b><rem class="tiemp-text"> {{ $timebreak }}</rem><b> minutos</b></small></p>
                                 @endif
-                                <button class="botones prueba-btn"><a href="{{url('/ciclobreakin/'.$ciclosos->id.'/edit')}}">Registrar break</a></button>
+                                <button class="botones prueba-btn"><a href="{{url('/ciclobreakin/'.$ciclosos->id.'/edit')}}">Registrar Break</a></button>
 
                             </div>
                         </div>
@@ -318,9 +320,9 @@ align-self: center;
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('breakout', $ciclosos->breakout)}}</e> </small></p>
 
                                                     @if ($timebreak > 20)
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Break</b><rem2 class="tiemp-text">{{ $timebreak }}</rem2><b> minutos</b></small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Tiempo</b><rem2 class="tiemp-text">{{ $timebreak }}</rem2><b> minutos</b></small></p>
                                                     @else
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Break</b><rem class="tiemp-text"> {{ $timebreak }}</rem> <b> minutos</b></small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Tiempo</b><rem class="tiemp-text"> {{ $timebreak }}</rem> <b> minutos</b></small></p>
                                                     @endif
 
                                 <input type='submit' class="botonesinactivos prueba-btn"  value='BREAK YA REGISTRADO'  disabled>
@@ -352,9 +354,9 @@ align-self: center;
                             <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Inicio:</b> <e class="tiemp-text"> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
                             <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('almuerzoout', $ciclosos->almuerzoout)}}</e> </small></p>
                             @if ($timelunch > 1)
-                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Almuerzo</b><rem class="tiemp-text">{{ $timelunch }}</rem><b> horas</b></small></p>
+                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo</b><rem class="tiemp-text">{{ $timelunch }}</rem><b> horas</b></small></p>
                             @else
-                            <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Almuerzo</b><rem class="tiemp-text"> {{ $timelunch }}</rem><b> horas</b></small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo</b><rem class="tiemp-text"> {{ $timelunch }}</rem><b> horas</b></small></p>
                             @endif
 
 
@@ -385,13 +387,13 @@ align-self: center;
                                         <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Inicio:</b> <e class="tiemp-text"> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
                                         <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('almuerzoout', $ciclosos->almuerzoout)}}</e> </small></p>
                                         @if ($timelunch > 1)
-                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Almuerzo</b><rem class="tiemp-text">{{ $timelunch }}</rem><b> horas</b></small></p>
+                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Tiempo</b><rem class="tiemp-text">{{ $timelunch }}</rem><b> horas</b></small></p>
                                         @else
-                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Almuerzo</b><rem class="tiemp-text"> {{ $timelunch }}</rem><b> horas</b></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 254, 254)"><b>Tiempo</b><rem class="tiemp-text"> {{ $timelunch }}</rem><b> horas</b></small></p>
                                         @endif
 
                                         <input type='submit' class="botonesinactivos prueba-btn"  value='ALMUERZO YA REGISTRADO'  disabled>
-                                    {{-- <button class="botones prueba-btn"><a href="{{url('/ciclolunch/'.$ciclosos->id.'/edit')}}">Registrar Lunch</a></button> --}}
+
 
                                 </div>
                             </div>
@@ -419,9 +421,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Inicio:</b><e class="tiemp-text"> {{ old('capacitacion', $ciclosos->capacitacion)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('capout', $ciclosos->capout)}}</e> </small></p>
                                 @if (empty($ciclosos->capout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Capacitacion: </b><rem class="tiemp-text">0</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Capacitación: </b><rem class="tiemp-text"> {{ $timecapa }} </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecapa }} </rem></small></p>
                                 @endif
 
 
@@ -452,9 +454,9 @@ align-self: center;
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Inicio:</b><e class="tiemp-text"> {{ old('capacitacion', $ciclosos->capacitacion)}} </e></small></p>
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('capout', $ciclosos->capout)}}</e> </small></p>
                                                     @if (empty($ciclosos->capout))
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Capacitacion: </b><rem class="tiemp-text">0</rem> </small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                                     @else
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Capacitación: </b><rem class="tiemp-text"> {{ $timecapa }} </rem></small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecapa }} </rem></small></p>
                                                     @endif
                                                     <input type='submit' class="botonesinactivos prueba-btn"  value='CAPACITACION YA REGISTRADA'  disabled>
                                                 </div>
@@ -483,9 +485,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
 
                                 @if (empty($ciclosos->pausasout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Pausas Activas: </b><rem class="tiemp-text">0</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Pausas Activas: </b><rem class="tiemp-text">{{ $timepausas }}</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">{{ $timepausas }}</rem> </small></p>
                                 @endif
                             <button class="botones prueba-btn"><a href="{{url('/ciclopausas/'.$ciclosos->id.'/edit')}}">Registrar Pausas</a></button>
                         </div>
@@ -514,9 +516,9 @@ align-self: center;
                                             <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
 
                                             @if (empty($ciclosos->pausasout))
-                                            <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Pausas Activas: </b><rem class="tiemp-text">0</rem> </small></p>
+                                            <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                             @else
-                                            <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Pausas Activas: </b><rem class="tiemp-text">{{ $timepausas }}</rem> </small></p>
+                                            <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">{{ $timepausas }}</rem> </small></p>
                                             @endif
                                             <input type='submit' class="botonesinactivos prueba-btn"  value='PAUSA REGISTRADA'  disabled>
 
@@ -548,9 +550,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
 
                                     @if (empty($ciclosos->dañoout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Daño de Equipo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b> Daño de Equipo: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
                                 @endif
 
 
@@ -583,9 +585,9 @@ align-self: center;
                                                         <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
 
                                                             @if (empty($ciclosos->dañoout))
-                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Daño de Equipo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                                         @else
-                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b> Daño de Equipo: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
+                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
                                                         @endif
 
                                                         <input type='submit' class="botonesinactivos prueba-btn"  value='AVERIA REGISTRADA'  disabled>
@@ -618,9 +620,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
 
                                     @if (empty($ciclosos->evaluacionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Evaluación: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Evaluación: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
                                 @endif
                                 <button class="botones prueba-btn"><a href="{{url('/cicloeva/'.$ciclosos->id.'/edit')}}">Registrar Evaluación</a></button>
                             </div>
@@ -647,9 +649,9 @@ align-self: center;
                                                         <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
 
                                                             @if (empty($ciclosos->evaluacionout))
-                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Evaluación: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                                         @else
-                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Evaluación: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
+                                                        <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
                                                         @endif
                                                         <input type='submit' class="botonesinactivos prueba-btn"  value='EVALUACION REGISTRADA'  disabled>
                                                     </div>
@@ -677,9 +679,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
                                    @if (empty($ciclosos->retroout))
-                                   <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Retro: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                   <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                    @else
-                                   <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Retro: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
+                                   <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
                                    @endif
                                 <button class="botones prueba-btn"><a href="{{url('/cicloretro/'.$ciclosos->id.'/edit')}}">Registrar Retro</a></button>
                                 </div>
@@ -702,9 +704,9 @@ align-self: center;
                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
                                        @if (empty($ciclosos->retroout))
-                                       <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Retro: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                       <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                        @else
-                                       <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Retro: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
+                                       <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
                                        @endif
                                        <input type='submit' class="botonesinactivos prueba-btn"  value=' RETROALIMENTACION REGISTRADA'  disabled>
                                     </div>
@@ -731,9 +733,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
                                 @if (empty($ciclosos->reunionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Reunión: </b><rem class="tiemp-text">0</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Reunión: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
 
                                 @endif
 
@@ -761,9 +763,9 @@ align-self: center;
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
                                                     @if (empty($ciclosos->reunionout))
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Reunión: </b><rem class="tiemp-text">0</rem> </small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                                     @else
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Reunión: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
 
                                                     @endif
 
@@ -796,9 +798,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('bano', $ciclosos->bano)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Salida:</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
                                 @if (empty($ciclosos->banoout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>baño: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>baño: </b><rem class="tiemp-text"> {{ $timebano}}</rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timebano}}</rem></small></p>
                                 @endif
 
                                 <button class="botones prueba-btn"><a href="{{url('/ciclobano/'.$ciclosos->id.'/edit')}}">Registrar baño</a></button>
@@ -855,9 +857,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Salida:</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
                                 @if (empty($ciclosos->calamidadout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Calamidad Domestica: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Calamidad Domestica: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
                                 @endif
                                 <button class="botones prueba-btn"><a href="{{url('/ciclocalamidad/'.$ciclosos->id.'/edit')}}">Registrar Calamidad</a></button>
                             </div>
@@ -882,9 +884,9 @@ align-self: center;
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Ingreso:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
                                                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Salida:</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
                                                     @if (empty($ciclosos->calamidadout))
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Hora Registro: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                                     @else
-                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Hora Registro: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
+                                                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
                                                     @endif
                                                     <input type='submit' class="botonesinactivos prueba-btn" value='CALAMIDAD REGISTRADA' disabled>
                                                 </div>
@@ -915,9 +917,9 @@ align-self: center;
 
 
                                 @if (empty($ciclosos->EmeMedicaout))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Emergencia Médica: </b><rem class="tiemp-text">0</rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text">0</rem></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Emergencia Médica: </b><rem class="tiemp-text"> {{ $timeEmeMedica }} </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timeEmeMedica }} </rem></small></p>
                                 @endif
                                 <button class="botones prueba-btn"><a href="{{url('/cicloEmeMedica/'.$ciclosos->id.'/edit')}}">Registrar Emergencia</a></button>
                             </div>

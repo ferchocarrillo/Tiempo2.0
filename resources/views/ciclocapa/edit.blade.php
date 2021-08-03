@@ -182,7 +182,7 @@ e{
                             <div class="col-sm-6">
                     <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('breakin', $ciclosos->breakin)}} </e></small></p>
                     <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('breakout', $ciclosos->breakout)}}</e> </small></p>
-                    <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Break: </b>  {{ $ciclosos->timebreak }} </small></p>
+                    <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b>  {{ $ciclosos->timebreak }} </small></p>
                     </div>
                   </div>
                   </div>
@@ -204,7 +204,7 @@ e{
                             <div class="col-sm-6">
                           <p class="card-text reloj-text"><small class="text-muted2"><b>Hora Entrada:</b><e class="tiemp-text"> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
                           <p class="card-text reloj-text"><small class="text-muted2"><b>Hora Salida: </b><e class="tiemp-text">&nbsp;&nbsp;&nbsp; {{ old('almuerzoout', $ciclosos->almuerzoout)}} </e></small></p>
-                          <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Almuerzo</b> {{ old('timelunch', $ciclosos->timelunch)}} <b>minutos</b></small></p>
+                          <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo</b> {{ old('timelunch', $ciclosos->timelunch)}} <b>minutos</b></small></p>
                     </div>
                       </div>
                       </div>
@@ -229,8 +229,8 @@ e{
                             <form action="{{url('/ciclocapa/'.$ciclosos->id)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                 {{csrf_field()}}
                                 @method('PATCH')
-                                <div><input type="hidden" id="hoy" name"hoy" value="{{ $hoy }}"> </div>
-                                <div><input type="hidden" id="hora" name"hora" value="{{ $hora }}"> </div>
+                                <div><input type="hidden" id="hoy" name="hoy" value="{{ $hoy }}"> </div>
+                                <div><input type="hidden" id="hora" name="hora" value="{{ $hora }}"> </div>
                             <div><input type="hidden" id= "nombre" name="nombre" value=" {{$user_nombre}}"></div>
                                 <div><input type="hidden" id= "cedula" name="cedula" value=" {{$user_cedula}}"></div>
                                 <div><input type="hidden" id= "capacitacion" name="capacitacion" value=" {{$hora}}"></div>
@@ -270,9 +270,9 @@ e{
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
 
                             @if (empty($ciclosos->pausasout))
-                            <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Pausas: </b><rem>0</rem> </small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem>0</rem> </small></p>
                             @else
-                            <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Pausas: </b><rem>  {{ $timepausas }}</rem> </small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem>  {{ $timepausas }}</rem> </small></p>
                             @endif
 
                         </div>
@@ -299,9 +299,9 @@ e{
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
 
                                     @if (empty($ciclosos->dañoout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Daño: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Daño: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timedaño }}</rem> </small></p>
                                 @endif
                             </div>
                         </div>
@@ -328,9 +328,9 @@ e{
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
 
                                 @if (empty($ciclosos->evaluacionout))
-                            <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Evaluación: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                             @else
-                            <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Evaluación: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
                             @endif
                             </div>
                         </div>
@@ -353,9 +353,9 @@ e{
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
                                    @if (empty($ciclosos->retroout))
-                                   <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Retro: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                   <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
                                    @else
-                                   <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Retro: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
+                                   <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeretro }}</rem> </small></p>
                                    @endif
                             </div>
                         </div>
@@ -378,9 +378,9 @@ e{
                             <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
                                 @if (empty($ciclosos->reunionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Reunión: </b><rem class="tiemp-text">0</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">0</rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Reunión: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
                                 @endif
                             </div>
                         </div>
@@ -389,93 +389,88 @@ e{
                   </div>
                   </div>
                   <div class="row">
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew1 style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Baño</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="\theme\images\baño.png" alt="" style="width: 130px; heigth:120px; margen-left: 23rem;">
+                    <div class="col-sm-4 style_card">
+                        <div class="card-space style_card">
+                            <div class="card-bodyNew1 style_card">
+                                <strong>
+                                    <p class="card-text" style="color:rgb(0, 0, 0)">Baño</p>
+                                </strong>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img src="\theme\images\baño.png" alt="" style="width: 130px; heigth:120px; margen-left: 23rem;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('bano', $ciclosos->bano)}} </e></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('banoout', $ciclosos->banoout)}}</e> </small></p>
+                                        @if (empty($ciclosos->banoout))
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                        @else
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timebano }}</rem></small></p>
+                                        @endif
+
+
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-6">
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Ingreso:</b><e class="tiemp-text"> {{ old('evaluacion', $ciclosos->evaluacion)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
-                                @if (empty($ciclosos->evaluacionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Evaluación: </b><rem class="tiemp-text"> 0 </rem></small></p>
-                                @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Evaluación: </b><rem class="tiemp-text"> {{ $timeeva }}</rem></small></p>
-                                @endif
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 style_card">
+                        <div class="card-space style_card">
+                            <div class="card-bodyNew1 style_card">
+                                <strong>
+                                    <p class="card-text" style="color:rgb(0, 0, 0)">Calamidad Domestica</p>
+                                </strong>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <br>
+                                        <img src="\theme\images\calamidad.png" alt="" style="width: 120px; heigth:250px; margen-left: 23rem;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
+
+                                        @if (empty($ciclosos->calamidadout))
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                        @else
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
+                                        @endif
+
+
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew1 style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Calamidad Domestica</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\calamidad.png" alt="" style="width: 120px; heigth:250px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Ingreso:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
-
-                                @if (empty($ciclosos->retroout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de calamidad: </b><rem class="tiemp-text"> 0 </rem></small></p>
-                                @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de calamidad: </b><rem class="tiemp-text"> {{ $timeretro }}</rem></small></p>
-                                @endif
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+                    <div class="col-sm-4 style_card">
+                        <div class="card-space style_card">
+                            <div class="card-bodyNew1 style_card">
+                                <strong>
+                                    <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia Médica</p>
+                                </strong>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <br>
+                                        <img src="\theme\images\emergencia medica.png" alt="" style="width: 100px; heigth:160px; margen-left: 23rem;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('EmeMedica', $ciclosos->EmeMedica)}} </e></small></p>
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
+                                        @if (empty($ciclosos->EmeMedicaout))
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem>0</rem></small></p>
+                                        @else
+                                        <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem> {{ $timeEmeMedica }} </rem></small></p>
+                                        @endif
 
 
-
-
-
-
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew1 style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia médica</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\emergencia medica.png" alt="" style="width: 100px; heigth:160px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Ingreso:</b>&nbsp;&nbsp; <e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
-
-                                @if (empty($ciclosos->reunionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Reunión: </b><rem class="tiemp-text">0</rem></small></p>
-                                @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Reunión: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
-                                @endif
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-
-            </div>
+                    </div>
             <br>
             <p style="text-align: center; aline-contents: center;"><i class="fa fa-copyright" aria-hidden="true">Todos los Derechos Reservados, Elaborado para Mentius S.A. Colombia 2021</i></p>
         </div>

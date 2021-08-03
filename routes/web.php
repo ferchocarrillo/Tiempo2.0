@@ -41,22 +41,22 @@ use Illuminate\Support\Facades\Gate;
     Route::resource('/user', 'UserController', ['except'=>[
         'create','store']])->names('user');
 
-    Route::resource('Registro',          RegistroController::class);
+    // Route::resource('Registro',          RegistroController::class);
     Route::resource('salida',            SalidaController::class);
     Route::resource('ciclo',             CicloController::class);
     Route::resource('ciclosalida',       CicloSalidaController::class);
     Route::resource('ciclobreakin',      CicloBreakinController::class);
-    Route::resource('ciclobreakout',     CicloBreakoutController::class);
-    Route::resource('ciclobano',      CicloBanoController::class);
-    Route::resource('ciclobanoout',     CicloBanooutController::class);
-    Route::resource('ciclocalamidad',      CicloCalamidadController::class);
-    Route::resource('ciclocalamidadout',     CicloCalamidadoutController::class);
+    Route::resource('ciclobreakout',     CicloBreakOutController::class);
+    Route::resource('ciclobano',         CiclobanoController::class);
+    Route::resource('ciclobanoout',      CiclobanooutController::class);
+    Route::resource('ciclocalamidad',    CicloCalamidadController::class);
+    Route::resource('ciclocalamidadout', CicloCalamidadOutController::class);
     Route::resource('ciclolunch',        CicloLunchController::class);
     Route::resource('ciclolunchout',     CicloLunchOutController::class);
     Route::resource('ciclocapa',         CicloCapaController::class);
-    Route::resource('ciclocapout',       CicloCapoutController::class);
-    Route::resource('cicloEmeMedica',         CicloEmeMedicaController::class);
-    Route::resource('cicloEmeMedicaout',       CicloEmeMedicaoutController::class);
+    Route::resource('ciclocapout',       CicloCapOutController::class);
+    Route::resource('cicloEmeMedica',    CicloEmeMedicaController::class);
+    Route::resource('cicloEmeMedicaout', CicloEmeMedicaoutController::class);
     Route::resource('ciclopausas',       CicloPausasController::class);
     Route::resource('ciclopausasout',    CicloPausaOutController::class);
     Route::resource('cicloaveria',       CicloAveriaController::class);
@@ -70,13 +70,8 @@ use Illuminate\Support\Facades\Gate;
     Route::resource('historico',         HistoricoController::class);
     Route::resource('personalgeneral',   PersonalActivoController::class);
 
-
-
     Route::get('ciclo-list-excel', 'PersonalActivoController@exportExcel')->name('ciclo.excel');
-
-
     Route::get('/searchpersonalgeneral','PersonalActivoController@searchpersonalgeneral');
-
     Route::get('/searchfecha','HistoricoController@searchfecha');
     Route::get('/searchname','HistoricoController@searchname');
     Route::get('/searchcedula','HistoricoController@searchcedula');

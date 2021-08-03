@@ -496,44 +496,32 @@ e{
 
 
 
-
-
-            <div class="col-sm-4 style_card">
-                <div class="card-space style_card">
-                    <div class="card-bodyNew1 style_card">
-                        <strong>
-                            <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia médica</p>
-                        </strong>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <br>
-                                <img src="\theme\images\emergencia medica.png" alt="" style="width: 100px; heigth:160px; margen-left: 23rem;">
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="card-text"><small class="text-muted2">Ingreso&nbsp;&nbsp; <e> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
-                                <p class="card-text"><small class="text-muted2">Salida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
-
-
-
-                                @if (empty($ciclosos->reunionout))
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo: </b>
-                                        <rem>0</rem>
-                                    </small></p>
-                                @else
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo: </b>
-                                        <rem> {{ $timereunion }} </rem>
-                                    </small></p>
-                                @endif
+<div class="col-sm-4 style_card">
+    <div class="card-space style_card">
+        <div class="card-bodyNew1 style_card">
+            <strong>
+                <p class="card-text" style="color:rgb(0, 0, 0)">Emergencia médica</p>
+            </strong>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="\theme\images\emergencia medica.png" alt="" style="width: 100px; heigth:160px; margen-left: 23rem;">
+                </div>
+                <div class="col-sm-6">
+                    <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('EmeMedica', $ciclosos->EmeMedica)}} </e></small></p>
+                    <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
+                       @if (empty($ciclosos->EmeMedicaout))
+                       <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                       @else
+                       <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">  {{ $timeEmeMedica }}</rem> </small></p>
+                       @endif
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-            </div>
-    <br>
+    </div>
+<br>
     <p style="text-align: center; aline-contents: center;"><i class="fa fa-copyright" aria-hidden="true">Todos los Derechos Reservados, Elaborado para Mentius S.A. Colombia 2021</i></p>
 </div>
 </div>

@@ -83,6 +83,12 @@ class CicloController extends Controller
         $ciclosos->evaluacion        = $request->evaluacion;
         $ciclosos->retro             = $request->retro;
         $ciclosos->reunion           = $request->reunion;
+        $ciclosos->bano              = $request->bano;
+        $ciclosos->banoout           = $request->banoout;
+        $ciclosos->calamidad         = $request->calamidad;
+        $ciclosos->calamidadout      = $request->calamidadout;
+        $ciclosos->EmeMedica         = $request->EmeMedica;
+        $ciclosos->EmeMedicaout      = $request->EmeMedicaout;
         $ciclosos->total             = $request->total;
         $ciclosos->llave             = $llave;
 

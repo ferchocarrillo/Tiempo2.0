@@ -124,18 +124,21 @@ class CiclocalamidadController extends Controller
         $tiempoQ = $carbon1->diffInMinutes($date17);
         $tiempoR = $carbon1->diffInMinutes($date18);
         $timecalamidad = ($tiempoR - $tiempoQ);
+        $timecalamidad = number_format($timecalamidad,1,'.',',');
 
         $date19 = $ciclosos->EmeMedica;
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);
         $tiempoW = $carbon1->diffInMinutes($date20);
-        $timeEmeMedica = ($tiempoV - $tiempoW);
+        $timeEmeMedica = ($tiempoW - $tiempoV);
+        $timeEmeMedica = number_format($timeEmeMedica,1,'.',',');
 
         $date21 = $ciclosos->bano;
         $date22 = $ciclosos->banoout;
         $tiempoX = $carbon1->diffInMinutes($date21);
         $tiempoY = $carbon1->diffInMinutes($date22);
         $timebano = ($tiempoY - $tiempoX);
+        $timebano = number_format($timebano,1,'.',',');
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
@@ -266,7 +269,7 @@ class CiclocalamidadController extends Controller
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);
         $tiempoW = $carbon1->diffInMinutes($date20);
-        $timeEmeMedica = ($tiempoV - $tiempoW);
+        $timeEmeMedica = ($tiempoW - $tiempoV);
         $timeEmeMedica = number_format($timeEmeMedica,1,'.',',');
 
         $date21 = $ciclosos->bano;
@@ -386,15 +389,15 @@ class CiclocalamidadController extends Controller
         $date20 = $ciclosos->EmeMedicaout;
         $tiempoV = $carbon1->diffInMinutes($date19);
         $tiempoW = $carbon1->diffInMinutes($date20);
-        $timeEmeMedica = ($tiempoV - $tiempoW);
+        $timeEmeMedica = ($tiempoW - $tiempoV);
         $timeEmeMedica = number_format($timeEmeMedica,1,'.',',');
 
-       $date21 = $ciclosos->bano;
-       $date22 = $ciclosos->bano;
-       $tiempoX = $carbon1->diffInMinutes($date21);
-       $tiempoY = $carbon1->diffInMinutes($date22);
-       $timebano = ($tiempoY - $tiempoX);
-       $timebano = number_format($timebano,1,'.',',');
+        $date21 = $ciclosos->bano;
+        $date22 = $ciclosos->banoout;
+        $tiempoX = $carbon1->diffInMinutes($date21);
+        $tiempoY = $carbon1->diffInMinutes($date22);
+        $timebano = ($tiempoY - $tiempoX);
+        $timebano = number_format($timebano,1,'.',',');
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;

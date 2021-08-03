@@ -182,7 +182,7 @@ e{
                             <div class="col-sm-6">
                                 <p class="card-text"><small class="text-muted2"><b>Entrada: </b> &nbsp;<e> {{ old('breakin', $ciclosos->breakin)}} </e></small></p>
                                 <p class="card-text"><small class="text-muted2"><b>Salida: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('breakout', $ciclosos->breakout)}}</e> </small></p>
-                                <p class="card-text"><small class="text-muted2"><b>Tiempo de Break </b> {{ old('timebreak', $ciclosos->timebreak)}} <b>minutos</b></small></p>
+                                <p class="card-text"><small class="text-muted2"><b>Tiempo:</b> {{ old('timebreak', $ciclosos->timebreak)}} <b>minutos</b></small></p>
                       </div>
                     </div>
                     </div>
@@ -206,7 +206,7 @@ e{
                             <div class="col-sm-6">
                         <p class="card-text"><small class="text-muted2"><b>Entrada</b>&nbsp;<e> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
                           <p class="card-text"><small class="text-muted2"><b>Salida</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('almuerzoout', $ciclosos->almuerzoout)}}</e> </small></p>
-                          <p class="card-text"><small class="text-muted2"><b>Tiempo de Almuerzo</b>  {{ old('timelunch', $ciclosos->timelunch)}} <b>minutos</b></small></p>
+                          <p class="card-text"><small class="text-muted2"><b>Tiempo:</b>  {{ old('timelunch', $ciclosos->timelunch)}} <b>minutos</b></small></p>
                       </div>
                     </div>
                     </div>
@@ -234,7 +234,7 @@ e{
                             <div class="col-sm-6">
                                  <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('capacitacion', $ciclosos->capacitacion)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('capout', $ciclosos->capout)}}</e> </small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Capacitación </b> {{ old('timecap', $ciclosos->timecap)}} </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo:</b> {{ old('timecap', $ciclosos->timecap)}} </small></p>
                         </div>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ e{
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('pausas', $ciclosos->pausas)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('pausasout', $ciclosos->pausasout)}}</e> </small></p>
-                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Pausas Activas: </b> {{ old('timepausas', $ciclosos->timepausas)}} </small></p>
+                            <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b> {{ old('timepausas', $ciclosos->timepausas)}} </small></p>
                         </div>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ e{
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('baño', $ciclosos->daño)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('dañoout', $ciclosos->dañoout)}}</e> </small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Daño de Equipo:</b> {{ old('timedaño', $ciclosos->timedaño)}} </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo:</b> {{ old('timedaño', $ciclosos->timedaño)}} </small></p>
                         </div>
                         </div>
                     </div>
@@ -304,9 +304,9 @@ e{
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('evaluacionout', $ciclosos->evaluacionout)}}</e> </small></p>
 
                                     @if (empty($ciclosos->evaluacionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Evaluación: </b><rem class="tiemp-text"> 0 </rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo:</b><rem class="tiemp-text"> 0 </rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Evaluación: </b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo:</b><rem class="tiemp-text">  {{ $timeeva }}</rem> </small></p>
                                 @endif
 
                             </div>
@@ -330,7 +330,7 @@ e{
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Retroalimentación:</b>  {{ old('timeretro', $ciclosos->timeretro)}} </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo:</b>  {{ old('timeretro', $ciclosos->timeretro)}} </small></p>
                             </div>
                         </div>
                     </div>
@@ -352,7 +352,7 @@ e{
                             <div class="col-sm-6">
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Reunion:</b>  {{ old('timereunion', $ciclosos->timereunion)}} </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo:</b>  {{ old('timereunion', $ciclosos->timereunion)}} </small></p>
                             </div>
                         </div>
                     </div>
@@ -434,13 +434,12 @@ e{
                                 <img src="\theme\images\calamidad.png" alt="" style="width: 120px; heigth:250px; margen-left: 23rem;">
                             </div>
                             <div class="col-sm-6">
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('retro', $ciclosos->retro)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('retroout', $ciclosos->retroout)}}</e> </small></p>
-
-                                @if (empty($ciclosos->retroout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Calamidad: </b><rem class="tiemp-text"> 0 </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b><e class="tiemp-text"> {{ old('calamidad', $ciclosos->calamidad)}} </e></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('calamidadout', $ciclosos->calamidadout)}}</e> </small></p>
+                                @if (empty($ciclosos->calamidadout))
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> 0 </rem></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Calamidad: </b><rem class="tiemp-text"> {{ $timeretro }}</rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timecalamidad }}</rem></small></p>
                                 @endif
                         </div>
 
@@ -466,14 +465,12 @@ e{
                                 <img src="\theme\images\emergencia medica.png" alt="" style="width: 100px; heigth:160px; margen-left: 23rem;">
                             </div>
                             <div class="col-sm-6">
-
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b> <e class="tiemp-text"> {{ old('reunion', $ciclosos->reunion)}} </e></small></p>
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('reunionout', $ciclosos->reunionout)}}</e> </small></p>
-
-                                @if (empty($ciclosos->reunionout))
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Reunión: </b><rem class="tiemp-text">0</rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio:</b> <e class="tiemp-text"> {{ old('EmeMedica', $ciclosos->EmeMedica)}} </e></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><e class="tiemp-text">{{ old('EmeMedicaout', $ciclosos->EmeMedicaout)}}</e> </small></p>
+                                @if (empty($ciclosos->EmeMedicaout))
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text">0</rem></small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo de Reunión: </b><rem class="tiemp-text"> {{ $timereunion }} </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"><b>Tiempo: </b><rem class="tiemp-text"> {{ $timeEmeMedica }} </rem></small></p>
                                 @endif
                             </div>
                         </div>
