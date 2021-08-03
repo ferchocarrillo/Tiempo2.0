@@ -375,11 +375,13 @@ border: none;
 
                     <!--BOTON ALMUERZO-->
                   <style>
-                      .prueba-btn{
-                        margin-top: 20px;
-                          width: 150px;
-                          height:50px;
-                      }
+              .prueba-btn{
+    margin-top: 60px;
+    margin-left:-10px;
+    font-size: 22px;
+    width: auto;
+    height:50px;
+    }
                   </style>
 
 

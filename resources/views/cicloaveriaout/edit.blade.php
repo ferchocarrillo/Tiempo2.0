@@ -330,11 +330,13 @@ b{
 
                         <!--BOTON ALMUERZO-->
                   <style>
-                      .prueba-btn{
-                        margin-top: 20px;
-                          width: 150px;
-                          height:50px;
-                      }
+                   .prueba-btn{
+                    margin-top: 60px;
+                    margin-left:-60px;
+                    font-size: 22px;
+                    width: 115px;
+                    height:50px;
+                    }
 
                       .reloj-text{
                           width: 190px;

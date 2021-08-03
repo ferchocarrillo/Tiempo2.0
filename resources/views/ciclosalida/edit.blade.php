@@ -14,17 +14,18 @@
 
 .botones{
     border-radius: 0.75rem;
-    width: 16rem;
+    width: auto;
     background-color: #51abba;
     border: #f8f8f8;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     align-content: center;
-    max-width: 16rem;
-    min-width: 12rem;
+
 
 
 }
+
+
 .botones:hover{
 background-color: #36738c;
 color:#ebf2f3;
@@ -37,7 +38,7 @@ border: #51abba;
 
 .botonesinactivos{
 border-radius: 0.75rem;
-width: 16rem;
+width: auto;
 background-color: #d8e3e6;
 border: #36738c;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -156,7 +157,7 @@ align-self: center;
 }
 
 
-
+}
 
 
 </style>
@@ -556,7 +557,7 @@ align-self: center;
                                 @endif
 
 
-                                    <button class="botones prueba-btn"><a href="{{url('/cicloaveria/'.$ciclosos->id.'/edit')}}">Tiempo</a></button>
+                                    <button class="botones prueba-btn"><a href="{{url('/cicloaveria/'.$ciclosos->id.'/edit')}}">Registrar Averia</a></button>
 
 
                                 </div>
@@ -990,7 +991,11 @@ align-self: center;
         setTimeout("HoraActual("+hora+", "+minuto+", "+segundo+")", 1000);
 }
 </script>
-
+<script type="text/javascript">
+    setTimeout(function(){
+    location.reload("contenedor_reloj");
+    }, 1800000);
+</script>
 
 
 <style>
@@ -1014,7 +1019,8 @@ align-self: center;
     .prueba-btn{
     margin-top: 10px;
     margin-left:-80px;
-    width: 80px;
+    font-size: 12px;
+    width: auto;
     height:30px;
     }
 
