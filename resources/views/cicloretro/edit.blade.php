@@ -168,7 +168,7 @@ e{
 
                         <p class="card-text reloj-text"><small class="text-muted2"><b>Inicio: </b><e class="tiemp-text"> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
                         <p class="card-text reloj-text"><small class="text-muted2"><b>Fin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><e class="tiemp-text">{{ old('salida', $ciclosos->salida)}}</e> </small></p>
-                        <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Conexión: </b>  {{ old('total', $ciclosos->total)}}</small></p>
+                        <p class="card-text reloj-text"><small class="text-muted2"><b>Conexión: </b>  {{ old('total', $ciclosos->total)}}</small></p>
 
                     </div>
                     </div>

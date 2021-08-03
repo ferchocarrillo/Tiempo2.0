@@ -217,9 +217,9 @@ align-self: center;
                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Inicio:</b><e class="tiemp-text"> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
                     <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Fin:</b><e class="tiemp-text">{{ old('salida', $ciclosos->salida)}}</e> </small></p>
                     @if (empty($ciclosos->salida))
-                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Horas de Conexión: </b><rem class="tiemp-text">0</rem> </small></p>
+                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Conexión: </b><rem class="tiemp-text">0</rem> </small></p>
                     @else
-                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Horas de Conexión: </b><rem class="tiemp-text"> {{ $total }} </rem></small></p>
+                    <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(0, 0, 0)"><b>Conexión: </b><rem class="tiemp-text"> {{ $total }} </rem></small></p>
                     @endif
                     <input type="hidden" name="total" id="total" value="{{$total}}">
                 <input type='submit' class="botones prueba-btn" value='Registrar Salida'>
@@ -256,9 +256,9 @@ align-self: center;
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Inicio:</b><e class="tiemp-text"> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
                                 <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Fin:</b><e class="tiemp-text">{{ old('salida', $ciclosos->salida)}}</e> </small></p>
                                 @if (empty($ciclosos->salida))
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Horas de Conexión: </b><rem class="tiemp-text">0</rem> </small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Conexión: </b><rem class="tiemp-text">0</rem> </small></p>
                                 @else
-                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Horas de Conexión: </b><rem class="tiemp-text"> {{ $total }} </rem></small></p>
+                                <p class="card-text reloj-text"><small class="text-muted2"  style="color:rgb(255, 255, 255)"><b>Conexión: </b><rem class="tiemp-text"> {{ $total }} </rem></small></p>
                                 @endif
                                 <input type="hidden" name="total" id="total" value="{{$total}}">
 

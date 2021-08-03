@@ -166,7 +166,7 @@ border: none;
                             <div class="col-sm-6">
                         <p class="card-text"><small class="text-muted2"><b>Inicio: </b>&nbsp; <e> {{ old('ingreso', $ciclosos->ingreso)}} </e></small></p>
                         <p class="card-text"><small class="text-muted2"><b>Fin: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<e>{{ old('salida', $ciclosos->salida)}}</e> </small></p>
-                        <p class="card-text"><small class="text-muted2"><b>Tiempo de Conexión </b>  {{ old('total', $ciclosos->total)}}<b>minutos</b></small></p>
+                        <p class="card-text"><small class="text-muted2"><b>Conexión: </b>  {{ old('total', $ciclosos->total)}}<b>minutos</b></small></p>
 
                     </div>
                     </div>

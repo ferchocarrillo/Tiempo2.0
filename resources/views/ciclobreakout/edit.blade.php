@@ -198,9 +198,9 @@ rem{
 
 
                           @if (empty($ciclosos->salida))
-                          <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Conexión: </b><rem class="tiemp-text">0</rem> </small></p>
+                          <p class="card-text reloj-text"><small class="text-muted2"><b>Conexión: </b><rem class="tiemp-text">0</rem> </small></p>
                           @else
-                          <p class="card-text reloj-text"><small class="text-muted2"><b>Horas de Conexión: </b><rem class="tiemp-text"> {{ $total }} </rem></small></p>
+                          <p class="card-text reloj-text"><small class="text-muted2"><b>Conexión: </b><rem class="tiemp-text"> {{ $total }} </rem></small></p>
                           @endif
                     </div>
                   </div>
