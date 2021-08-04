@@ -276,7 +276,7 @@ class CicloSalidaController extends Controller
         $timeluch = $ciclosos->timelunch;
         $ingresoA = $carbon1->diffInHours($ingreso);
         $salidaB = $carbon1->diffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timeluch;
+        $total = ($salidaB - $ingresoA)- $timelunch;
         $total = number_format($total,1,'.',',');
 
 

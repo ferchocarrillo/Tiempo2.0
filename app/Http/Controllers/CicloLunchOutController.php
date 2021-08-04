@@ -75,7 +75,7 @@ class CicloLunchOutController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -141,10 +141,10 @@ class CicloLunchOutController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timeluch = $ciclosos->timelunch;
+        $timelunch = $ciclosos->timelunch;
         $ingresoA = $carbon1->diffInHours($ingreso);
         $salidaB = $carbon1->diffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timeluch;
+        $total = ($salidaB - $ingresoA)- $timelunch;
         $total = number_format($total,1,'.',',');
 
         $validatedData = $request->validate([
@@ -154,6 +154,7 @@ class CicloLunchOutController extends Controller
         $ciclosos->nombre            = $user_nombre;
         $ciclosos->cedula            = $user_cedula;
         $ciclosos->fecha             = $hoy;
+        $ciclosos->almuerzo          = $request->almuerzo;
         $ciclosos->almuerzoout       = $hora;
         $ciclosos->timelunch         = $timelunch;
         $ciclosos->llave             = $llave;
@@ -207,7 +208,7 @@ class CicloLunchOutController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -317,7 +318,7 @@ class CicloLunchOutController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;

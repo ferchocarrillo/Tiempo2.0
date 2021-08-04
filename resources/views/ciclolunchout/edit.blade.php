@@ -234,7 +234,7 @@
 
 
                       <p class="card-text reloj-text"><small class="text-muted2"><b>Entrada:</b><e class="tiemp-text"> {{ old('almuerzo', $ciclosos->almuerzo)}} </e></small></p>
-                        <input type="hidden" name="timelunch" id="timelunch" value="{{ $timelunch }}">
+                        <input type="text" name="timelunch" id="timelunch" value="{{ $timelunch }}">
                         <input type='submit' class="botones"  value='Fin'>
 
                     </form>
