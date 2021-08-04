@@ -79,7 +79,7 @@ class CicloAveriaController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -100,6 +100,7 @@ class CicloAveriaController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -145,11 +146,12 @@ class CicloAveriaController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
+
         $ciclosos = new Ciclo();
         $ciclosos->nombre            = $user_nombre;
         $ciclosos->cedula            = $user_cedula;
@@ -212,7 +214,7 @@ class CicloAveriaController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -233,6 +235,7 @@ class CicloAveriaController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -278,10 +281,10 @@ class CicloAveriaController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
 
@@ -314,7 +317,6 @@ class CicloAveriaController extends Controller
         $hora = Carbon::now()->format('H:i:s');
         $llave = $user_cedula. $hoy;
         $carbon1 = new \Carbon\Carbon("2021-01-01 00:00:00");
-
         $ciclosos=Ciclo::findOrFail($id);
 
         $date1 = $ciclosos->breakin;
@@ -329,7 +331,7 @@ class CicloAveriaController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -350,6 +352,7 @@ class CicloAveriaController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;

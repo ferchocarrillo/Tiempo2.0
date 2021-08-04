@@ -74,7 +74,7 @@ class CiclocalamidadOutController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -95,6 +95,7 @@ class CiclocalamidadOutController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -212,7 +213,7 @@ class CiclocalamidadOutController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -233,6 +234,7 @@ class CiclocalamidadOutController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -278,10 +280,10 @@ class CiclocalamidadOutController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
 
@@ -322,7 +324,7 @@ class CiclocalamidadOutController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -343,6 +345,7 @@ class CiclocalamidadOutController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -388,10 +391,10 @@ class CiclocalamidadOutController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB  = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
         $datosCiclo =request()->except(['_token','_method']);

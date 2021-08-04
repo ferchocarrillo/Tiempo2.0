@@ -80,7 +80,7 @@ class CicloEmeMedicaController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -101,6 +101,7 @@ class CicloEmeMedicaController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -210,7 +211,7 @@ class CicloEmeMedicaController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -231,6 +232,7 @@ class CicloEmeMedicaController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -276,10 +278,10 @@ class CicloEmeMedicaController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
         return view('cicloEmeMedica.edit',compact('total','ciclosos','date1','date2','date3','date4','date5','date6','date7','date8','date9','date10','date11','date12','date13','date14','date15','date16','date17','date18','date19','date20','date21','date22','ciclosos','hoy','hora','llave','user_nombre','user_cedula','timebreak','timelunch','timecapa','timepausas','timedaño','timeeva', 'timeretro','timereunion','timecalamidad','timeEmeMedica','timebano'));
@@ -320,7 +322,7 @@ class CicloEmeMedicaController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -341,6 +343,7 @@ class CicloEmeMedicaController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -386,10 +389,10 @@ class CicloEmeMedicaController extends Controller
 
         $ingreso =$ciclosos->ingreso;
         $salida  =$ciclosos->salida;
-        $timelunch = $ciclosos->timelunch;
-        $ingresoA = $carbon1->floatDiffInHours($ingreso);
-        $salidaB  = $carbon1->floatDiffInHours($salida);
-        $total = ($salidaB - $ingresoA)-$timelunch;
+        $timeluch = $ciclosos->timelunch;
+        $ingresoA = $carbon1->diffInHours($ingreso);
+        $salidaB = $carbon1->diffInHours($salida);
+        $total = ($salidaB - $ingresoA)-$timeluch;
         $total = number_format($total,1,'.',',');
 
         $datosEmeMedica = request()->except(['_token','_method']);

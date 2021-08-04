@@ -74,7 +74,7 @@ class CicloReunionController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -95,6 +95,7 @@ class CicloReunionController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
@@ -202,7 +203,7 @@ class CicloReunionController extends Controller
         $tiempoC = $carbon1->floatDiffInHours($date3);
         $tiempoD = $carbon1->floatDiffInHours($date4);
         $timelunch = ($tiempoD - $tiempoC);
-        $timelunch = number_format($timelunch,1,'.',',');
+        $timelunch = number_format($timelunch,2,'.',',');
 
         $date5 = $ciclosos->capacitacion;
         $date6 = $ciclosos->capout;
@@ -223,6 +224,7 @@ class CicloReunionController extends Controller
         $tiempoI = $carbon1->diffInMinutes($date9);
         $tiempoJ = $carbon1->diffInMinutes($date10);
         $timedaño = ($tiempoJ - $tiempoI);
+        $timedaño = number_format($timedaño,1,'.',',');
 
         $date11 = $ciclosos->evaluacion;
         $date12 = $ciclosos->evaluacionout;
